@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- color of address bar in mobile browser -->
+    <meta name="theme-color" content="#28292C">
+    <!-- favicon  -->
+    <link rel="shortcut icon" href="img/thumbnail.ico" type="image/x-icon">
+    <title>Ashley documentation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #E56734;
+            color: #FDFDFF;
+        }
+
+        header {
+            padding: 90px 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 72px;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 36px;
+            text-align: center;
+        }
+
+        a {
+            color: #FDFDFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #FDFDFF;
+            text-decoration: underline;
+        }
+
+        pre {
+            overflow-x: scroll;
+            padding: 30px;
+            background-color: #1A2430;
+            color: #FDFDFF;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Ashley documentation</h1>
+            <h3>Thank you for purchasing!</h3>
+        </header>
+        <section class="marcup">
+            <h2>App HTML marcup</h2>
+            <br>
+            <br>
+
+            <pre class="hljs" style="display: block; background: rgb(50, 41, 49); color: rgb(185, 181, 184); padding: 60px; overflow: hidden"><span class="hljs-meta" style="color: rgb(20, 155, 147);">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"zxx"</span>&gt;</span>
+
+<span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">head</span>&gt;</span>
+
+    ...
+
+<span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">head</span>&gt;</span>
+
+<span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">body</span>&gt;</span>
+
+    <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- wrapper --&gt;</span>
+    <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"mil-wrapper"</span> <span class="hljs-attr">id</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"top"</span>&gt;</span>
+
+        <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- cursor --&gt;</span>
+        <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"mil-ball"</span>&gt;</span>
+            ...
+        <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">div</span>&gt;</span>
+        <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- cursor end --&gt;</span>
+
+        <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- preloader --&gt;</span>
+        <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"mil-preloader"</span>&gt;</span>
+            ...
+        <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">div</span>&gt;</span>
+        <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- preloader end --&gt;</span>
+
+        <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- scrollbar progress --&gt;</span>
+        <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"mil-progress-track"</span>&gt;</span>
+            ...
+        <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">div</span>&gt;</span>
+        <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- scrollbar progress end --&gt;</span>
+
+        <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- menu --&gt;</span>
+        <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"mil-menu-frame"</span>&gt;</span>
+            ...
+        <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">div</span>&gt;</span>
+        <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- menu --&gt;</span>
+        
+        <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- curtain --&gt;</span>
+        <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"mil-curtain"</span>&gt;</span><span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">div</span>&gt;</span>
+        <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- curtain end --&gt;</span>
+
+        <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- frame --&gt;</span>
+        <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"mil-frame"</span>&gt;</span>
+            ...
+        <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">div</span>&gt;</span>
+        <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- frame end --&gt;</span>
+
+        <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- content --&gt;</span>
+        <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"mil-content"</span>&gt;</span>
+            <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"swupMain"</span> <span class="hljs-attr">class</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"mil-main-transition"</span>&gt;</span>
+
+                <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- banner --&gt;</span>
+                <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"mil-banner mil-dark-bg"</span>&gt;</span>
+                    ...
+                <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">section</span>&gt;</span>
+                <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- banner end --&gt;</span>
+
+                ...
+
+                <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- footer --&gt;</span>
+                <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"mil-dark-bg"</span>&gt;</span>
+                    ...
+                <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">footer</span>&gt;</span>
+                <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- footer end --&gt;</span>
+
+                <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- hidden elements --&gt;</span>
+                <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"mil-hidden-elements"</span>&gt;</span>
+                    ...
+                <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">div</span>&gt;</span>
+                <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- hidden elements end --&gt;</span>
+
+            <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">div</span>&gt;</span>
+        <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">div</span>&gt;</span>
+        <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- content --&gt;</span>
+    <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">div</span>&gt;</span>
+    <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- wrapper end --&gt;</span>
+
+    ...
+
+<span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">body</span>&gt;</span>
+
+<span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">html</span>&gt;</span>
+</pre>
+
+            <br>
+            <br>
+
+        </section>
+        <section class="css-assets">
+            <br>
+            <br>
+            <h2>CSS assets</h2>
+            <p>Plugins</p>
+            <ul>
+                <li><a target="_blank" href="https://getbootstrap.com">Bootstrap grid</a></li>
+                <li><a target="_blank" href="https://fontawesome.com/v5/search">Font awesome</a></li>
+                <li><a target="_blank" href="https://idangero.us/swiper/">Swiper</a></li>
+                <li><a target="_blank" href="https://fancyapps.com/fancybox/">Fancybox</a></li>
+            </ul>
+            <br>
+            <p>Ashley scss</p>
+            <ul>
+
+                <li>_variables.scss</li>
+                <li>_common.scss</li>
+                <li>_components.scss</li>
+                <br>
+                <li>style.scss (compiled in style.css)</li>
+
+            </ul>
+            <br>
+            <p>Ashley css</p>
+            <ul>
+                <li>style.css</li>
+            </ul>
+            <br>
+            <br>
+
+
+
+            <pre class="hljs" style="display: block; background: rgb(50, 41, 49); color: rgb(185, 181, 184); padding: 60px; overflow: hidden"><span class="hljs-meta" style="color: rgb(20, 155, 147);">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"zxx"</span>&gt;</span>
+
+<span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">head</span>&gt;</span>
+
+    ...
+
+    <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- bootstrap grid css --&gt;</span>
+    <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"css/plugins/bootstrap-grid.css"</span>&gt;</span>
+    <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- font awesome css --&gt;</span>
+    <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"css/plugins/font-awesome.min.css"</span>&gt;</span>
+    <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- swiper css --&gt;</span>
+    <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"css/plugins/swiper.min.css"</span>&gt;</span>
+    <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- fancybox css --&gt;</span>
+    <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"css/plugins/fancybox.min.css"</span>&gt;</span>
+    <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- ashley scss --&gt;</span>
+    <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"css/style.css"</span>&gt;</span>
+    <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- page name --&gt;</span>
+    <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">title</span>&gt;</span>Ashley<span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">title</span>&gt;</span>
+
+<span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">head</span>&gt;</span>
+
+<span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">body</span>&gt;</span>
+
+    ...
+
+<span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">body</span>&gt;</span>
+
+<span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">html</span>&gt;</span>
+</pre>
+
+
+
+
+
+
+
+        </section>
+        <section class="js assets">
+            <br>
+            <br>
+            <h2>Js assets</h2>
+            <p>Plugins</p>
+            <ul>
+
+                <li><a target="_blank" href="https://jquery.com">jQuery</a></li>
+                <li><a target="_blank" href="https://swup.js.org/">Swup</a></li>
+                <li><a target="_blank" href="https://idangero.us/swiper/">Swiper</a></li>
+                <li><a target="_blank" href="https://fancyapps.com/fancybox/">Fancybox</a></li>
+                <li><a target="_blank" href="https://greensock.com/gsap/">GSAP</a></li>
+                <li><a target="_blank" href="https://www.smoothscroll.net/win/">Smooth scroll</a></li>
+                <li><a target="_blank" href="https://greensock.com/scrolltrigger/">ScrollTrigger</a></li>
+                <li><a target="_blank" href="https://greensock.com/scrolltoplugin/">ScrollTo</a></li>
+
+            </ul>
+            <br>
+            <p>Ashley assets</p>
+            <ul>
+                <li>main.js</li>
+            </ul>
+            <br>
+            <br>
+
+
+
+            <pre class="hljs" style="display: block; background: rgb(50, 41, 49); color: rgb(185, 181, 184); padding: 60px; overflow: hidden"><span class="hljs-meta" style="color: rgb(20, 155, 147);">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"zxx"</span>&gt;</span>
+
+<span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">head</span>&gt;</span>
+
+    ...
+
+<span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">head</span>&gt;</span>
+
+<span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">body</span>&gt;</span>
+
+    ...
+
+    <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- jQuery js --&gt;</span>
+    <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"js/plugins/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">script</span>&gt;</span>
+    <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- swup js --&gt;</span>
+    <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"js/plugins/swup.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">script</span>&gt;</span>
+    <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- swiper js --&gt;</span>
+    <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"js/plugins/swiper.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">script</span>&gt;</span>
+    <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- fancybox js --&gt;</span>
+    <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"js/plugins/fancybox.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">script</span>&gt;</span>
+    <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- gsap js --&gt;</span>
+    <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"js/plugins/gsap.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">script</span>&gt;</span>
+    <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- scroll smoother --&gt;</span>
+    <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"js/plugins/smooth-scroll.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">script</span>&gt;</span>
+    <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- scroll trigger js --&gt;</span>
+    <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"js/plugins/ScrollTrigger.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">script</span>&gt;</span>
+    <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- scroll to js --&gt;</span>
+    <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"js/plugins/ScrollTo.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">script</span>&gt;</span>
+    <span class="hljs-comment" style="color: rgb(152, 148, 152);">&lt;!-- ashley js --&gt;</span>
+    <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"js/main.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">script</span>&gt;</span>
+
+<span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">body</span>&gt;</span>
+
+<span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;/<span class="hljs-name" style="color: rgb(221, 70, 76);">html</span>&gt;</span>
+</pre>
+
+
+
+        </section>
+        <section class="fonts">
+            <br>
+            <br>
+            <h2>Fonts</h2>
+            <ul>
+                <li><a target="_blank" href="https://fonts.google.com/specimen/Outfit?query=outfit">Outfit</a></li>
+            </ul>
+            <br>
+            <h2>Icons</h2>
+            <ul>
+                <li><a target="_blank" href="https://fontawesome.com">Font awesome</a></li>
+            </ul>
+
+        </section>
+        <br>
+        <br>
+    </div>
+</body>
+
+</html>
