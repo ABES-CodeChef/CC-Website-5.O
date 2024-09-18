@@ -56,6 +56,11 @@ p.s. I am available for Freelance hire (UI design, web development). email: mill
 main
 
 ------------------------------------------- */
+img {
+  filter: invert(0%) contrast(100%) brightness(100%);
+}
+
+
 *,
 *:before,
 *:after {
@@ -543,11 +548,11 @@ link
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
 }
-.mil-link.mil-down-arrow svg {
+.mil-link.mil-down-ar svg {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
-.mil-link.mil-down-arrow:hover svg {
+.mil-link.mil-down-ar:hover svg {
   -webkit-transform: scale(1.15) rotate(90deg);
           transform: scale(1.15) rotate(90deg);
 }
@@ -557,8 +562,8 @@ link
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+      -ms-flex-direction: -reverse;
+          flex-direction: -reverse;
 }
 .mil-link.mil-icon-left svg {
   margin-left: 0;
@@ -643,17 +648,17 @@ button
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
 }
-.mil-button.mil-arrow-down svg {
+.mil-button.mil-ar-down svg {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
-.mil-button.mil-arrow-down:hover {
+.mil-button.mil-ar-down:hover {
   -webkit-transform: scale(1.015);
           transform: scale(1.015);
   -webkit-filter: brightness(110%);
           filter: brightness(110%);
 }
-.mil-button.mil-arrow-down:hover svg {
+.mil-button.mil-ar-down:hover svg {
   -webkit-transform: scale(1.15) rotate(90deg);
           transform: scale(1.15) rotate(90deg);
 }
@@ -1149,7 +1154,7 @@ cursor
 hidden elements
 
 ------------------------------------------- */
-.mil-hidden-elements .mil-dodecahedron, .mil-hidden-elements .mil-lines, .mil-hidden-elements .mil-arrow {
+.mil-hidden-elements .mil-dodecahedron, .mil-hidden-elements .mil-lines, .mil-hidden-elements .mil-ar {
   display: none;
 }
 
@@ -2766,7 +2771,7 @@ revievs
   display: -ms-flexbox;
   display: flex;
 }
-.mil-slider-nav .mil-slider-arrow {
+.mil-slider-nav .mil-slider-ar {
   width: 40px;
   height: 40px;
   padding: 10px;
@@ -2776,23 +2781,23 @@ revievs
   -webkit-transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
 }
-.mil-slider-nav .mil-slider-arrow svg path {
+.mil-slider-nav .mil-slider-ar svg path {
   fill: rgb(255, 152, 0);
 }
-.mil-slider-nav .mil-slider-arrow.mil-prev {
+.mil-slider-nav .mil-slider-ar.mil-prev {
   margin-right: 10px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-.mil-slider-nav .mil-slider-arrow.swiper-button-disabled {
+.mil-slider-nav .mil-slider-ar.swiper-button-disabled {
   opacity: 0.1;
   cursor: not-allowed;
 }
-.mil-slider-nav .mil-slider-arrow:hover {
+.mil-slider-nav .mil-slider-ar:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
 }
-.mil-slider-nav .mil-slider-arrow:hover.mil-prev {
+.mil-slider-nav .mil-slider-ar:hover.mil-prev {
   -webkit-transform: rotate(180deg) scale(1.15);
           transform: rotate(180deg) scale(1.15);
 }
@@ -2810,10 +2815,10 @@ revievs
     top: 0;
   }
 }
-.mil-slider-nav.mil-soft .mil-slider-arrow {
+.mil-slider-nav.mil-soft .mil-slider-ar {
   background-color: rgb(229, 229, 229);
 }
-.mil-slider-nav.mil-soft .mil-slider-arrow svg path {
+.mil-slider-nav.mil-soft .mil-slider-ar svg path {
   fill: rgb(0, 0, 0);
 }
 
