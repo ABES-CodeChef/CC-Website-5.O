@@ -4230,12 +4230,3 @@ html.is-animating .mil-menu-frame {
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
 }
-
-.tagline {
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  color: rgb(255, 255, 255);
-  margin-bottom: 20px;
-  margin-top: -10px;
-}
