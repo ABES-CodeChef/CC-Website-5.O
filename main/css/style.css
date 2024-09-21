@@ -4233,3 +4233,57 @@ html.is-animating .mil-menu-frame {
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
 }
+
+
+
+.card {
+  width: 500px;
+  height: 250px;
+  perspective: 1000px;
+  padding-top: 30px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: #FF9800;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  justify-content: left;
+  font-size: 30px;
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  background-color: #f8b859;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border: 10px solid #FF9800;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  transform: rotateY(180deg);
+}
