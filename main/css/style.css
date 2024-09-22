@@ -58,6 +58,7 @@ main
 ------------------------------------------- */
 img {
   filter: invert(0%) contrast(100%) brightness(100%);
+  z-index: 5;
 }
 
 
@@ -816,6 +817,7 @@ backgrounds
 ------------------------------------------- */
 .mil-dark-bg {
   position: relative;
+  background-color: black;
 }
 .mil-dark-bg:before {
   content: "";
@@ -825,7 +827,7 @@ backgrounds
   pointer-events: none;
   z-index: 2;
   -webkit-backdrop-filter: invert(100%);
-          backdrop-filter: invert(100%);
+          /* backdrop-filter: invert(100%); */
 }
 .mil-dark-bg .mi-invert-fix {
   height: 100%;
@@ -1247,6 +1249,7 @@ frame
   }
   .mil-frame .mil-frame-top .mil-menu-btn span, .mil-frame .mil-frame-top .mil-menu-btn span:after, .mil-frame .mil-frame-top .mil-menu-btn span:before {
     background: rgb(255, 255, 255);
+          /* backdrop-filter: invert(100%); */
   }
 }
 .mil-frame .mil-frame-bottom {
@@ -1332,7 +1335,8 @@ menu button
   display: block;
   width: 28px;
   height: 2.5px;
-  background: rgb(0, 0, 0);
+  backdrop-filter: invert(100%);
+  /* background: rgb(0, 0, 0); */
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-transition: inherit;
