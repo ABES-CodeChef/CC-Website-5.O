@@ -2560,6 +2560,7 @@ team
   }
 }
 .mil-team-card .mil-description {
+ z-index: 10;
   opacity: 0;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.8);
