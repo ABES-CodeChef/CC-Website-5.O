@@ -853,7 +853,7 @@ spaces
 }
 
 .mil-mb-5 {
-  margin-bottom: 5px;
+  margin-bottom:5%;
 }
 
 .mil-mb-10 {
@@ -870,6 +870,9 @@ spaces
 
 .mil-mb-30 {
   margin-bottom: 30px;
+}
+.mil-ml-5{
+  margin-left: 15% ;
 }
 
 .mil-mb-60 {
