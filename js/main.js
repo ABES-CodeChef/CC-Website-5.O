@@ -1050,3 +1050,10 @@ $(function () {
     });
 
 });
+
+
+
+//
+
+
+// app.use(express.static('contact.html'));

@@ -1,0 +1,15 @@
+{
+  "name": "cc-website-5.o",
+  "version": "1.0.0",
+  "description": "The official CodeChef ABESec club website is designed to showcase the events, activities, and achievements of our club. It features a clean and responsive design built with HTML, CSS, and JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

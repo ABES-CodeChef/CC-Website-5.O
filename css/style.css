@@ -685,7 +685,7 @@ textarea {
   padding: 0 30px;
   width: 100%;
   font-size: 12px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-weight: 500;
   font-family: "Outfit", sans-serif;
@@ -700,14 +700,14 @@ textarea:focus {
 }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   font-size: 12px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.5);
 }
 input::-moz-placeholder, textarea::-moz-placeholder {
   font-size: 12px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.5);
@@ -3372,6 +3372,61 @@ portfolio
     display: flex;
   }
 }
+
+
+
+/*social-media*/
+
+.mil-social-media{
+  position:relative;
+}
+.mil-social-media .Social-media {
+  position:absolute;
+  display: inline-flex;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 20px;
+  z-index: 10; 
+}
+
+.Social-media a {
+  height: 125px;
+  width: 125px;
+  background-color: #f5f6fa5d;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+  text-decoration: none;
+}
+
+.Social-media a:hover {
+  background-color: #e1e1e1;
+  transform: scale(1.1);
+}
+
+.Social-media i {
+  font-size: 36px;
+  color: #333;
+}
+
+.Social-media a:hover i {
+  color: #007bff;
+}
+.Social-media a.insta:hover i {
+ color:  #d62976;
+}
+
+
+
+
+
+
+
+
+
 
 /***************************
 
