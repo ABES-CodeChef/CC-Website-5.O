@@ -4278,12 +4278,17 @@ html.is-animating .mil-menu-frame {
   transform: rotateY(0deg);
 }
 
+.card-front img{
+  border-top-left-radius: 8px;
+  border-bottom-left-radius:8px ;
+}
+
 .card-back {
-  background-color: #f8b859;
+  background-color: #e8a540;
   color: #fff;
   display: flex;
   align-items: center;
-  border: 10px solid #FF9800;
+  border: 4px solid #e18803;
   border-radius: 10px;
   justify-content: center;
   font-size: 18px;
@@ -4291,4 +4296,30 @@ html.is-animating .mil-menu-frame {
   margin-bottom: 10px;
   padding: 20px;
   transform: rotateY(180deg);
+}
+
+@media screen and (max-width:452px){
+  .card-front img{
+    width: 180px;
+  }
+  .card-front span{
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width:432px){
+  .card-front img{
+    width: 180px;
+  }
+  .card-front span{
+    font-size: 28px;
+  }
+}
+@media screen and (max-width:380px){
+  .card-front img{
+    width: 180px;
+  }
+  .card-front span{
+    font-size: 20px;
+  }
 }
