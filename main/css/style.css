@@ -108,6 +108,8 @@ body {
 
 .container {
   pointer-events: all;
+  margin-top: 100px;
+  
 }
 
 .mil-relative {
@@ -398,6 +400,7 @@ a {
 
 .mil-muted {
   color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
 }
 
 .mil-dark {
@@ -1677,7 +1680,7 @@ banner
 
 ------------------------------------------- */
 .mil-banner {
-  height: 100vh;
+  background-color:;
 }
 .mil-banner .container {
   height: 100%;
