@@ -2250,7 +2250,7 @@ map
 
 ***************************/
 
-.mil-map-frame {
+mil-map-frame {
     background-color: $gs-10;
     pointer-events: all;
     height: 600px;
@@ -2273,7 +2273,7 @@ map
 
     &:hover {
         & .mil-map {}
-    }
+    }.
 }
 
 /* -------------------------------------------
