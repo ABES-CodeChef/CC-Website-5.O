@@ -1050,3 +1050,40 @@ $(function () {
     });
 
 });
+
+
+// Function to trigger the fist bump animation
+function triggerFistBump() {
+    const leftFist = document.querySelector('.left-fist');
+    const rightFist = document.querySelector('.right-fist');
+  
+    // Apply the animations to both fists
+    leftFist.style.animation = 'left-windup 1s ease-in-out 0s forwards, left-bump 0.4s ease-in 1s forwards, left-post 0.2s ease-out 1.4s forwards';
+    rightFist.style.animation = 'right-windup 1s ease-in-out 0s forwards, right-bump 0.4s ease-in 1s forwards, right-post 0.2s ease-out 1.4s forwards';
+  
+    // Reset the animation after 2 seconds so it can be triggered again
+    setTimeout(() => {
+      leftFist.style.animation = 'none';
+      rightFist.style.animation = 'none';
+    }, 2000);
+  }
+  
+  // Intersection Observer to check when the element enters the viewport
+  const observerOptions = {
+    root: null, // Use the viewport as the root
+    threshold: 0.5 // Trigger when 50% of the element is visible
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // When the element is in view, trigger the fist bump
+        triggerFistBump();
+      }
+    });
+  }, observerOptions);
+  
+  // Observe the .fistbump container
+  const fistBumpSection = document.querySelector('.fistbump');
+  observer.observe(fistBumpSection);
+  

@@ -4292,3 +4292,58 @@ html.is-animating .mil-menu-frame {
   padding: 20px;
   transform: rotateY(180deg);
 }
+
+.fistbump {
+	font-size: 10rem;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  margin-top: 100px;
+}
+
+.left-fist, .right-fist {
+	animation: ease-in; /* Start without any animation */
+}
+
+@keyframes left-windup {
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes left-bump {
+	100% {
+		transform: translateX(10%);
+	}
+}
+
+@keyframes left-post {
+	50% {
+		transform: translateX(15%) scaleX(0.9) scaleY(1.1);
+	}
+	100% {
+		transform: translateX(10%) scaleX(1) scaleY(1);
+	}
+}
+
+@keyframes right-windup {
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+@keyframes right-bump {
+	100% {
+		transform: translateX(-10%);
+	}
+}
+
+@keyframes right-post {
+	50% {
+		transform: translateX(-15%) scaleX(0.9) scaleY(1.1);
+	}
+	100% {
+		transform: translateX(-10%) scaleX(1) scaleY(1);
+	}
+}
