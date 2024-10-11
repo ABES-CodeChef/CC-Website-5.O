@@ -29,7 +29,7 @@
     <div class="mil-wrapper" id="top">
 
         <!-- cursor -->
-        <div class="mil-ball">
+        <!-- <div class="mil-ball">
             <span class="mil-icon-1">
                 <svg viewBox="0 0 128 128">
                     <path d="M106.1,41.9c-1.2-1.2-3.1-1.2-4.2,0c-1.2,1.2-1.2,3.1,0,4.2L116.8,61H11.2l14.9-14.9c1.2-1.2,1.2-3.1,0-4.2	c-1.2-1.2-3.1-1.2-4.2,0l-20,20c-1.2,1.2-1.2,3.1,0,4.2l20,20c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9c1.2-1.2,1.2-3.1,0-4.2	L11.2,67h105.5l-14.9,14.9c-1.2,1.2-1.2,3.1,0,4.2c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9l20-20c1.2-1.2,1.2-3.1,0-4.2L106.1,41.9	z" />
@@ -37,11 +37,11 @@
             </span>
             <div class="mil-more-text">More</div>
             <div class="mil-choose-text">Сhoose</div>
-        </div>
+        </div> -->
         <!-- cursor end -->
 
         <!-- preloader -->
-        <div class="mil-preloader">
+        <!-- <div class="mil-preloader">
             <div class="mil-preloader-animation">
                 <div class="mil-pos-abs mil-animation-1">
                     <p class="mil-h3 mil-muted mil-thin">Collaboration</p>
@@ -55,20 +55,20 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- preloader end -->
 
         <!-- scrollbar progress -->
-        <div class="mil-progress-track">
+        <!-- <div class="mil-progress-track">
             <div class="mil-progress"></div>
-        </div>
+        </div> -->
         <!-- scrollbar progress end -->
 
         <!-- menu -->
         <div class="mil-menu-frame">
+
             <!-- frame clone -->
-            <div class="mil-frame-top">
-                <!-- <a href="home-1.html" class="mil-logo">A.</a> -->
+            <div class="mil-frame-top" >
                 <img src="./img/logos/LogoCC.png" alt="CodeChef_ABESEC" style="height: 100px; width: 100px;">
                 <div class="mil-menu-btn">
                     <span></span>
@@ -194,14 +194,15 @@
         <!-- curtain end -->
 
         <!-- frame -->
-        <div class="mil-frame">
-            <div class="mil-frame-top">
+        <div class="mil-frame" >
+            <div class="mil-frame-top" >
                 <!-- <a href="home-1.html" class="mil-logo">A.</a> -->
                 <img src="./img/logos/LogoCC.png" alt="CodeChef_ABESEC" style="height: 100px; width: 100px;">
                 <div class="mil-menu-btn">
                     <span></span>
                 </div>
             </div>
+        </div>
             <!-- <div class="mil-frame-bottom">
                 <div class="mil-current-page"></div>
                 <div class="mil-back-to-top">
@@ -210,7 +211,7 @@
                     </a>
                 </div>
             </div> -->
-        </div>
+        <!-- </div> -->
         <!-- frame end -->
 
         <!-- content -->
@@ -219,7 +220,7 @@
 
                 <!-- banner -->
                 <section class="mil-banner mil-dark-bg">
-                    <div class="mi-invert-fix">
+                    <div class="mi-invert-fix"> 
                         <div class="mil-animation-frame">
                             <div class="mil-animation mil-position-1 mil-scale" data-value-1="7" data-value-2="1.6"></div>
                             <div class="mil-animation mil-position-2 mil-scale" data-value-1="4" data-value-2="1"></div>
@@ -232,37 +233,41 @@
                             <div class="mil-banner-content mil-up">
                                 
                                     <h1 class="mil-muted mil-mt-150">Designing <span class="mil-thin">a Better</span><br> World <span class="mil-thin">Today</span></h1>
-                                    
+                                  <!-- Event Card List   -->
                                     <div class="card__container">
-                                        <article class="card__article">
-                                            <img src="../main/img/current_event/landscape-1.png" alt="image" class="card__img">
-                            
+                                        <article class="card__article" id="event1" onclick="handleEventClick('event1')">
+                                            <img src="img/current_event/event1.jpeg" alt="image" class="card__img">
+                                            <div class="text-overlay">#1 Pull N' Merge</div>
                                             <div class="card__data">
-                                                <span class="card__description">Poon Hill, Nepal</span>
-                                                <h2 class="card__title">Starry Night</h2>
-                                                <a href="#" class="card__button">Read More</a>
+                                                <h2 class="card__title">Pull N' Merge</h2>
+                                                <span class="card__description">"Pull N' Merge," an exciting hands-on GitHub event hosted by the tech community Elixir at ABES Engineering College in Ghaziabad. <b>On October 16, 2024, from 4:30 PM to 5:30 PM</b></span>
+                                                <a href="#" class="card__button" onclick="redirectToEvent('https://lu.ma/ojwix4ty')">Join Now</a>
                                             </div>
                                         </article>
+                                        
                                         <article class="card__article">
-                                            <img src="../main/img/current_event/landscape-1.png" alt="image" class="card__img">
-                            
+                                            <img src="img/current_event/soon3.gif" alt="image" class="card__img">
+                                            <div class="text-overlay"></div>
                                             <div class="card__data">
-                                                <span class="card__description">Poon Hill, Nepal</span>
-                                                <h2 class="card__title">Starry Night</h2>
-                                                <a href="#" class="card__button">Read More</a>
+                                                <h2 class="card__title">Oops! Looks like our events took a coffee break ☕😅</h2>
+                                                <span class="card__description">"Check back soon—big things are brewing! 🔥🎉</span>
+                                                <a href="#" class="card__button" onclick="redirectToEvent('')"></a>
                                             </div>
+                                            
                                         </article>
                                         <article class="card__article">
-                                            <img src="../main/img/current_event/landscape-1.png" alt="image" class="card__img">
-                            
+                                            <img src="img/current_event/soon3.gif" alt="image" class="card__img">
+                                            <div class="text-overlay"></div>
                                             <div class="card__data">
-                                                <span class="card__description">Poon Hill, Nepal</span>
-                                                <h2 class="card__title">Starry Night</h2>
-                                                <a href="#" class="card__button">Read More</a>
+                                            <h2 class="card__title">Oops! Looks like our events took a coffee break ☕😅</h2>
+                                                <span class="card__description">"Check back soon—big things are brewing! 🔥🎉</span>
+                                                <a href="#" class="card__button" onclick="redirectToEvent('')"></a>
                                             </div>
+                                        
                                         </article>
+                                        
                                     </div>
-                                    
+                                    <!-- Event Card List END   -->
                                 
                             </div>
                         </div>
