@@ -1087,3 +1087,13 @@ function triggerFistBump() {
   const fistBumpSection = document.querySelector('.fistbump');
   observer.observe(fistBumpSection);
   
+
+  const radioButtons = document.querySelectorAll('input[type="radio"]');
+let currentIndex = 0;
+
+function changeSlide() {
+  radioButtons[currentIndex].checked = true;
+  currentIndex = (currentIndex + 1) % radioButtons.length; // Loop through all radio buttons
+}
+
+setInterval(changeSlide, 5000); // Change slides every 3 seconds
