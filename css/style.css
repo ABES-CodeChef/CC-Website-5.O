@@ -599,10 +599,10 @@ button
   background-color: rgb(255, 152, 0);
   color: rgb(0, 0, 0);
   border-radius: 70px;
-  padding: 0 15px 0 50px;
+  padding: 0 25px 0 25px;
   height: 70px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
   -webkit-transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
 }
@@ -666,7 +666,7 @@ button
 @media screen and (max-width: 992px) {
   .mil-button {
     height: 60px;
-    padding: 0 10px 0 40px;
+    padding: 0 20px 0 20px;
   }
   .mil-button svg {
     margin-left: 25px;
@@ -1235,7 +1235,7 @@ frame
     height: 90px;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1600px) {
   .mil-frame .mil-frame-top {
     height: 90px;
     background-color: rgba(0, 0, 0, 0.95);
