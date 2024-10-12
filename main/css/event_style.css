@@ -2,17 +2,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
 
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 
 
-img {
+/* img {
   display: block;
   max-width: 100%;
   height: auto;
-}
+} */
 
 
 .card__container {
@@ -38,12 +38,12 @@ img {
   object-fit: cover; 
   border-radius: 1.5rem; 
 }
-.row{
+/* .row{
   display: flex;
   flex-direction: column;
   flex-flow: wrap;
   gap:20px;
-}
+} */
 
 .card__data {
   width: 80%; 
