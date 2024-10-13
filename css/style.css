@@ -3160,12 +3160,12 @@ portfolio
 .mil-portfolio-item .mil-cover-frame .mil-cover img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit:contain;
   -o-object-position: center;
      object-position: center;
   -webkit-transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
-  transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
+  /* transition: 0.4s cubic-bezier(0, 0, 0.3642, 1); */
 }
 .mil-portfolio-item .mil-cover-frame.mil-vert {
   padding-bottom: 130%;
@@ -3189,6 +3189,7 @@ portfolio
 }
 .mil-portfolio-item.mil-slider-item .mil-descr {
   overflow: hidden;
+  border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3253,6 +3254,7 @@ portfolio
 
 .mil-portfolio-nav {
   background-color: rgb(242, 242, 242);
+  border-radius: 20px;
   width: 100%;
   padding: 0 60px;
   height: 180px;
