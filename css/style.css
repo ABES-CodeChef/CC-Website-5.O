@@ -26,7 +26,7 @@ p.s. I am available for Freelance hire (UI design, web development). email: mill
     - scrollbar
     - frame
     - menu button
-    - menu 
+    - menu
     - banner
     - circle text
     - lines
@@ -685,7 +685,7 @@ textarea {
   padding: 0 30px;
   width: 100%;
   font-size: 12px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-weight: 500;
   font-family: "Outfit", sans-serif;
@@ -700,7 +700,7 @@ textarea:focus {
 }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   font-size: 12px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.5);
@@ -737,7 +737,7 @@ textarea::placeholder {
 
 textarea {
   padding: 15px 30px;
-  height: 300px;
+  height: 150px;
 }
 
 /* -------------------------------------------
