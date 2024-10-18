@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <!-- bootstrap grid css -->
     <link rel="stylesheet" href="css/plugins/bootstrap-grid.css">
     <!-- font awesome css -->
@@ -59,16 +58,16 @@
         <!-- preloader end -->
 
         <!-- scrollbar progress -->
-        <div class="mil-progress-track">
+        <!-- <div class="mil-progress-track">
             <div class="mil-progress"></div>
-        </div>
+        </div> -->
         <!-- scrollbar progress end -->
 
         <!-- menu -->
         <div class="mil-menu-frame">
+
             <!-- frame clone -->
-            <div class="mil-frame-top">
-                <!-- <a href="home-1.html" class="mil-logo">A.</a> -->
+            <div class="mil-frame-top" >
                 <img src="./img/logos/LogoCC.png" alt="CodeChef_ABESEC" style="height: 100px; width: 100px;">
                 <div class="mil-menu-btn">
                     <span></span>
@@ -196,19 +195,13 @@
         <!-- frame -->
         <div class="mil-frame">
             <div class="mil-frame-top">
-                <!-- <a href="home-1.html" class="mil-logo">A.</a> -->
-                <img src="./img/logos/LogoCC.png" alt="CodeChef_ABESEC" style="height: 100px; width: 100px;">
-                <div class="mil-menu-btn">
+                
+                <img src="./img/logos/LogoCC.png" alt="CodeChef_ABESEC" style="height: 100px; width: 100px;" class="imageOverlay">
+              
+                <div class="mil-menu-btn" >
                     <span></span>
                 </div>
-            </div>
-            <div class="mil-frame-bottom">
-                <div class="mil-current-page"></div>
-                <div class="mil-back-to-top">
-                    <a href="#top" class="mil-link mil-dark mil-arrow-place">
-                        <span>Back to top</span>
-                    </a>
-                </div>
+           
             </div>
         </div>
         <!-- frame end -->
@@ -219,7 +212,7 @@
 
                 <!-- banner -->
                 <section class="mil-banner mil-dark-bg">
-                    <div class="mi-invert-fix">
+                    <div class="mi-invert-fix"> 
                         <div class="mil-animation-frame">
                             <div class="mil-animation mil-position-1 mil-scale" data-value-1="7" data-value-2="1.6"></div>
                             <div class="mil-animation mil-position-2 mil-scale" data-value-1="4" data-value-2="1"></div>
@@ -230,63 +223,47 @@
 
                         <div class="container">
                             <div class="mil-banner-content mil-up">
-
-                                <h1 class="mil-muted mil-mt-150">Designing <span class="mil-thin">a Better</span><br> World <span class="mil-thin">Today</span></h1>
-                                <div class="row">
-                                    <div class="card" style="padding-top: 40px;">
-                                        <div class="card-inner"sty>
-                                          <div class="card-front">
-                                            <img src="img/photo/CC_UE_1.jpeg" height="210px" width="210px">
-                                            <span class="mil-muted mil-mt-150" style="padding-left:20px;">UPCOMING <br><br>EVENT</span>
-                                          </div>
-                                          <div class="card-back" style="padding: 10px;">
-                                            <h4>UPCOMING EVENT</h4>
-                                            <p style="padding-left: 15px;">YAYAYAYAYAYAY Event horaaaaa Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro ab mollitia cumq Lorem ipsum dolor sit amet?</p>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      
-                                    
-                                    <!-- <div class="col-md-7 col-lg-5">
-
-                                        <p class="mil-light-soft mil-mb-60">Welcome to our world of endless imagination and boundless creativity. Together, let's embark on a remarkable journey where dreams become tangible realities.</p>
-
-                                    </div> -->
-
-                                    <!-- <div style="height: 348px; width: 535px;" class="mil-image-frame mil-horizontal mil-up mil-mb-30">
-                                        <img src="img/works/2/2.jpg" alt="image">
-                                        <a data-fancybox="gallery" data-no-swup href="img/works/2/2.jpg" class="mil-zoom-btn">
-                                            <img src="img/icons/zoom.svg" alt="zoom">
-                                        </a>
-                                    </div> -->
-                                </div>
-                                                                <!-- <a href="services.html" class="mil-button mil-arrow-place mil-btn-space">
-                                <span>What we do</span>
-                                </a>
-
-                                <a href="portfolio-1.html" class="mil-link mil-muted mil-arrow-place">
-                                    <span>View works</span>
-                                </a> -->
-
-                                <!-- <div class="mil-circle-text">
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve" class="mil-ct-svg mil-rotate" data-value="360">
-                                        <defs>
-                                            <path id="circlePath" d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 " />
-                                        </defs>
-                                        <circle cx="150" cy="100" r="75" fill="none" /> -->
-                                        <!-- <g>
-                                            <use xlink:href="#circlePath" fill="none" />
-                                            <text style="letter-spacing: 6.5px">
-                                                <textPath xlink:href="#circlePath">Scroll down - Scroll down - </textPath>
-                                            </text>
-                                        </g> 
-                                    </svg>
-                                    <a href="#about" class="mil-button mil-arrow-place mil-icon-button mil-arrow-down"></a>
-                                </div> -->
-
+                                
+                                    <h1 class="mil-muted mil-mt-150">Designing <span class="mil-thin">a Better</span><br> World <span class="mil-thin">Today</span></h1>
+                                  <!-- Event Card List   -->
+                                    <div class="card__container">
+                                        <article class="card__article" id="event1" onclick="handleEventClick('event1')">
+                                            <img src="img/current_event/event1.jpeg" alt="image" class="card__img">
+                                            <div class="text-overlay">#1 Pull N' Merge</div>
+                                            <div class="card__data">
+                                                <h2 class="card__title">Pull N' Merge</h2>
+                                                <span class="card__description">"Pull N' Merge," an exciting hands-on GitHub event hosted by the tech community Elixir at ABES Engineering College in Ghaziabad. <b>On October 16, 2024, from 4:30 PM to 5:30 PM</b></span>
+                                                <a href="#" class="card__button" onclick="redirectToEvent('https://lu.ma/ojwix4ty')">Join Now</a>
+                                            </div>
+                                        </article>
+                                        
+                                        <article class="card__article">
+                                            <img src="img/current_event/soon3.gif" alt="image" class="card__img">
+                                            <div class="text-overlay"></div>
+                                            <div class="card__data">
+                                                <h2 class="card__title">Oops! Looks like our events took a coffee break ☕😅</h2>
+                                                <span class="card__description">"Check back soon—big things are brewing! 🔥🎉</span>
+                                                <a href="#" class="card__button" onclick="redirectToEvent('')"></a>
+                                            </div>
+                                            
+                                        </article>
+                                        <article class="card__article">
+                                            <img src="img/current_event/soon3.gif" alt="image" class="card__img">
+                                            <div class="text-overlay"></div>
+                                            <div class="card__data">
+                                            <h2 class="card__title">Oops! Looks like our events took a coffee break ☕😅</h2>
+                                                <span class="card__description">"Check back soon—big things are brewing! 🔥🎉</span>
+                                                <a href="#" class="card__button" onclick="redirectToEvent('')"></a>
+                                            </div>
+                                        
+                                        </article>
+                                        
+                                    </div>
+                                    <!-- Event Card List END   -->
+                                
                             </div>
                         </div>
-                    </div>
+                    </div> 
                 </section>
                 <!-- banner end -->
 
@@ -788,7 +765,7 @@
                 <!-- footer end -->
 
                 <!-- hidden elements -->
-                <!-- <div class="mil-hidden-elements">
+                <div class="mil-hidden-elements">
                     <div class="mil-dodecahedron">
                         <div class="mil-pentagon">
                             <div></div>
@@ -890,7 +867,7 @@
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M150 678C232.29 678 299 611.29 299 529C299 446.71 232.29 380 150 380C67.7096 380 1 446.71 1 529C1 611.29 67.7096 678 150 678ZM150 679C232.843 679 300 611.843 300 529C300 446.157 232.843 379 150 379C67.1573 379 0 446.157 0 529C0 611.843 67.1573 679 150 679Z" class="mil-move" />
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M299 380H1V678H299V380ZM0 379V679H300V379H0Z" class="mil-move" />
                     </svg>
-                </div> -->
+                </div>
                 <!-- hidden elements end -->
 
             </div>
@@ -917,6 +894,7 @@
     <script src="js/plugins/ScrollTo.min.js"></script>
     <!-- ashley js -->
     <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
