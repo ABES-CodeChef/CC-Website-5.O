@@ -26,7 +26,7 @@ p.s. I am available for Freelance hire (UI design, web development). email: mill
     - scrollbar
     - frame
     - menu button
-    - menu 
+    - menu
     - banner
     - circle text
     - lines
@@ -112,7 +112,7 @@ body {
   position: relative;
   overflow: hidden;
   max-width: 100%;
-  
+
 }
 
 
@@ -126,7 +126,7 @@ body {
   margin-top: 100px;
   margin-left: 50px;
   background-color: #6a3093;
-  
+
 } */
 
 .mil-relative {
@@ -480,11 +480,11 @@ a {
 }
 @media screen and (min-width: 1200px) {
   .mil-content{
-    
+
     background-color: rgb(255, 255, 255);
   }
   .mil-banner .mil-dark-bg{
-   
+
     background-color: rgb(0, 0, 0);
   }
 }
@@ -745,7 +745,7 @@ textarea {
   padding: 0 30px;
   width: 100%;
   font-size: 12px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-weight: 500;
   font-family: "Outfit", sans-serif;
@@ -760,28 +760,28 @@ textarea:focus {
 }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   font-size: 12px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.5);
 }
 input::-moz-placeholder, textarea::-moz-placeholder {
   font-size: 12px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.5);
 }
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   font-size: 12px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.5);
 }
 input::-ms-input-placeholder, textarea::-ms-input-placeholder {
   font-size: 12px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.5);
@@ -789,7 +789,7 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder {
 input::placeholder,
 textarea::placeholder {
   font-size: 12px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.5);
@@ -797,7 +797,7 @@ textarea::placeholder {
 
 textarea {
   padding: 15px 30px;
-  height: 300px;
+  height: 150px;
 }
 
 /* -------------------------------------------
@@ -882,7 +882,7 @@ backgrounds
   /* background-color: rgb(255, 255, 255); */
   -webkit-backdrop-filter: invert(100%);
   backdrop-filter: invert(100%);
-  
+
 }
 .mil-dark-bg:before {
   content: "";
@@ -896,7 +896,7 @@ backgrounds
           backdrop-filter: invert(100%); */
           -webkit-backdrop-filter: invert(100%);
           backdrop-filter: invert(100%);
-          
+
 }
 
 
@@ -1317,8 +1317,8 @@ frame
     padding: 0 30px;
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
-    
-   
+
+
   }
   .mil-frame .mil-frame-top .mil-logo {
     color: rgb(255, 255, 255);
@@ -1405,8 +1405,8 @@ menu button
   -webkit-transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
   /* background-color: aqua; */
-  
-  
+
+
 }
 @media screen and (max-width: 992px) {
   .mil-menu-btn {
@@ -1424,7 +1424,7 @@ menu button
   background: linear-gradient(to right, #6a3093, #a044ff);
 
 
-  
+
   /* backdrop-filter: invert(100%); */
 
   -webkit-backface-visibility: hidden;
@@ -1622,12 +1622,12 @@ menu
       -ms-flex-align: center;
           align-items:flex-start;
           padding-top: 200px;
-          
-          
-    
 
-          
-  
+
+
+
+
+
 }
 .mil-main-menu ul {
   padding: 0;
@@ -4350,7 +4350,7 @@ html.is-animating .mil-menu-frame {
   flex-wrap:wrap;
   gap:50px;
   padding-bottom: 100px;
-  
+
 }
 
 .card__article {
@@ -4360,14 +4360,14 @@ html.is-animating .mil-menu-frame {
 }
 
 .card__img {
-  width: 328px; 
-  height: 350px; 
-  object-fit: cover; 
-  border-radius: 1.5rem; 
+  width: 328px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 1.5rem;
 }
 .card__data {
-  width: 80%; 
-  max-width: 80%; 
+  width: 80%;
+  max-width: 80%;
   background-color: white;
   padding: 1.5rem 2rem;
   box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
@@ -4379,7 +4379,7 @@ html.is-animating .mil-menu-frame {
   margin-inline: auto;
   opacity: 0;
   transition: opacity 1s 1s;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   height: auto;
   max-height: 100%;
 }
@@ -4391,8 +4391,8 @@ html.is-animating .mil-menu-frame {
   font-size: 12px;
   margin-bottom: .25rem;
   color:rgb(0, 0, 0);
-  /* background: linear-gradient(to right, #ff7e5f, #feb47b); 
-    -webkit-background-clip: text; 
+  /* background: linear-gradient(to right, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;  */
 }
 
@@ -4416,25 +4416,25 @@ html.is-animating .mil-menu-frame {
 
 .text-overlay {
   position: absolute;
-  top: 5%; 
-  left: 0; 
-  right: 0; 
-  margin: 0 auto; 
+  top: 5%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   color: white;
   font-size: 24px;
   font-weight: bold;
-  background-color: rgba(170, 170, 170, 0.454); 
+  background-color: rgba(170, 170, 170, 0.454);
   padding: 10px;
   border-radius: 5px;
-  max-width: 90%; 
-  text-align: left; 
+  max-width: 90%;
+  text-align: left;
   word-wrap: break-word;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 .text-overlay:empty {
-  background-color: transparent; 
-  padding: 0; 
-  display: none; 
+  background-color: transparent;
+  padding: 0;
+  display: none;
 }
 
 
@@ -4493,4 +4493,3 @@ html.is-animating .mil-menu-frame {
     overflow: hidden;
   }
 }
-
