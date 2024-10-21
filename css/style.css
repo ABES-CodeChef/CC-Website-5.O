@@ -3258,12 +3258,12 @@ portfolio
 .mil-portfolio-item .mil-cover-frame .mil-cover img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit:contain;
   -o-object-position: center;
      object-position: center;
   -webkit-transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
-  transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
+  /* transition: 0.4s cubic-bezier(0, 0, 0.3642, 1); */
 }
 .mil-portfolio-item .mil-cover-frame.mil-vert {
   padding-bottom: 130%;
@@ -3287,6 +3287,7 @@ portfolio
 }
 .mil-portfolio-item.mil-slider-item .mil-descr {
   overflow: hidden;
+  border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3351,6 +3352,7 @@ portfolio
 
 .mil-portfolio-nav {
   background-color: rgb(242, 242, 242);
+  border-radius: 20px;
   width: 100%;
   padding: 0 60px;
   height: 180px;
@@ -4445,51 +4447,31 @@ html.is-animating .mil-menu-frame {
   transition: opacity .3s;
 }
 
-.card__article:hover {
-  animation: remove-overflow 2s forwards;
+
 }
 
-.card__article:not(:hover) {
-  animation: show-overflow 2s forwards;
-}
-
-.card__article:not(:hover) .card__data {
-  animation: remove-data 1s forwards;
-}
-
-@keyframes show-data {
-  50% {
-    transform: translateY(-10rem);
+@media screen and (max-width:452px){
+  .card-front img{
+    width: 180px;
   }
-  100% {
-    transform: translateY(-7rem);
+  .card-front span{
+    font-size: 32px;
   }
 }
 
-@keyframes remove-overflow {
-  to {
-    overflow: initial;
+@media screen and (max-width:432px){
+  .card-front img{
+    width: 180px;
+  }
+  .card-front span{
+    font-size: 28px;
   }
 }
-
-@keyframes remove-data {
-  0% {
-    transform: translateY(-7rem);
+@media screen and (max-width:380px){
+  .card-front img{
+    width: 180px;
   }
-  50% {
-    transform: translateY(-10rem);
-  }
-  100% {
-    transform: translateY(.5rem);
-  }
-}
-
-@keyframes show-overflow {
-  0% {
-    overflow: initial;
-    pointer-events: none;
-  }
-  50% {
-    overflow: hidden;
+  .card-front span{
+    font-size: 20px;
   }
 }

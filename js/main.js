@@ -8,6 +8,28 @@ Portfolio:  https://themeforest.net/user/millerdigitaldesign/portfolio?ref=Mille
 p.s. I am available for Freelance hire (UI design, web development). email: miller.themes@gmail.com
 
 ------------------------------------------- */
+// import { JSDOM } from 'jsdom';
+// import jQuery from 'jquery';
+// import { gsap } from 'gsap';
+// import Swup from 'swup'; // Import Swup
+
+// // Create a new JSDOM instance
+// const { window } = new JSDOM(`<!DOCTYPE html><html><body></body></html>`);
+// const $ = jQuery(window); // Pass the window to jQuery
+
+// // Initialize Swup with the window object
+// const swup = new Swup({
+//     containers: ['#swupMain', '#swupMenu'],
+//     animateHistoryBrowsing: true,
+//     linkSelector: 'a:not([data-no-swup])',
+//     animationSelector: '[class="mil-main-transition"]'
+// });
+
+// // Your existing jQuery code
+// $(function () {
+//     console.log('jQuery is working in Node.js!');
+//     // Additional code using jQuery and Swup
+// });
 
 $(function () {
 
@@ -21,7 +43,7 @@ $(function () {
     const options = {
         containers: ['#swupMain', '#swupMenu'],
         animateHistoryBrowsing: true,
-        linkSelector: 'a:not([data-no-swup])',
+        // linkSelector: 'a:not([data-no-swup])',
         animationSelector: '[class="mil-main-transition"]'
     };
     const swup = new Swup(options);
@@ -1051,20 +1073,3 @@ $(function () {
 
 });
 
-var swiper = new Swiper(".swiper-container", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 20,
-      stretch: 0,
-      depth: 350,
-      modifier: 1,
-      slideShadows: true
-    },
-    pagination: {
-      el: ".swiper-pagination"
-    }
-  });
-  
