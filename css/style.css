@@ -192,9 +192,9 @@ h6,
   color: rgb(0, 0, 0);
   font-weight: bold;
   line-height: 120%;
-  background: linear-gradient(to right, #f32170, #ff6b08,#cf23cf, #056cf4);
+  /* background: linear-gradient(to right, #f32170, #ff6b08,#cf23cf, #056cf4);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 @media screen and (max-width: 768px) {
   h1 br,
