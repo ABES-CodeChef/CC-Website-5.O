@@ -26,7 +26,7 @@ p.s. I am available for Freelance hire (UI design, web development). email: mill
     - scrollbar
     - frame
     - menu button
-    - menu 
+    - menu
     - banner
     - circle text
     - lines
@@ -51,6 +51,8 @@ p.s. I am available for Freelance hire (UI design, web development). email: mill
 --------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
 /* -------------------------------------------
 
 main
@@ -83,6 +85,12 @@ body {
   -ms-scroll-chaining: none;
       overscroll-behavior: none;
 }
+
+
+.menuBarOptionbox{
+  background-color: rgba(133, 132, 132, 0.381);
+
+}
 @media screen and (max-width: 768px) {
   html,
 body {
@@ -104,11 +112,22 @@ body {
   position: relative;
   overflow: hidden;
   max-width: 100%;
+
 }
+
 
 .container {
   pointer-events: all;
+  /* margin-top: 100px; */
 }
+
+/* .banner_container{
+  pointer-events: all;
+  margin-top: 100px;
+  margin-left: 50px;
+  background-color: #6a3093;
+
+} */
 
 .mil-relative {
   position: relative;
@@ -147,6 +166,9 @@ body {
 section {
   position: relative;
   overflow: hidden;
+  background-color: rgb(248, 248, 248);
+
+
 }
 
 /* -------------------------------------------
@@ -168,8 +190,11 @@ h6,
 .mil-h6 {
   font-family: "Outfit", sans-serif;
   color: rgb(0, 0, 0);
-  font-weight: 500;
+  font-weight: bold;
   line-height: 120%;
+  background: linear-gradient(to right, #f32170, #ff6b08,#cf23cf, #056cf4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 @media screen and (max-width: 768px) {
   h1 br,
@@ -185,35 +210,41 @@ h5 br,
 h6 br,
 .mil-h6 br {
     display: none;
+    font-weight: bold;
   }
 }
 
 h1,
 .mil-h1 {
   font-size: 86px;
+  font-weight: bold;
 }
 @media screen and (max-width: 1400px) {
   h1,
 .mil-h1 {
     font-size: 74px;
+    font-weight: bold;
   }
 }
 @media screen and (max-width: 1200px) {
   h1,
 .mil-h1 {
     font-size: 72px;
+    font-weight: bold;
   }
 }
 @media screen and (max-width: 992px) {
   h1,
 .mil-h1 {
     font-size: 58px;
+    font-weight: bold;
   }
 }
 @media screen and (max-width: 768px) {
   h1,
 .mil-h1 {
     font-size: 34px;
+    font-weight: bold;
   }
 }
 
@@ -221,69 +252,81 @@ h2,
 .mil-h2 {
   font-size: 68px;
   line-height: 120%;
+  font-weight: bold;
 }
 @media screen and (max-width: 1200px) {
   h2,
 .mil-h2 {
     font-size: 56px;
+    font-weight: bold;
   }
 }
 @media screen and (max-width: 992px) {
   h2,
 .mil-h2 {
     font-size: 44px;
+    font-weight: bold;
   }
 }
 @media screen and (max-width: 768px) {
   h2,
 .mil-h2 {
     font-size: 36px;
+    font-weight: bold;
   }
 }
 
 h3,
 .mil-h3 {
   font-size: 42px;
+  font-weight: bold;
 }
 @media screen and (max-width: 1200px) {
   h3,
 .mil-h3 {
     font-size: 39px;
+    font-weight: bold;
   }
 }
 @media screen and (max-width: 992px) {
   h3,
 .mil-h3 {
     font-size: 36px;
+    font-weight: bold;
   }
 }
 @media screen and (max-width: 768px) {
   h3,
 .mil-h3 {
     font-size: 30px;
+    font-weight: bold;
   }
 }
 
 h4,
 .mil-h4 {
   font-size: 28px;
+  font-weight: bold;
 }
 @media screen and (max-width: 1200px) {
   h4,
 .mil-h4 {
     font-size: 26px;
+    font-weight: bold;
   }
 }
 @media screen and (max-width: 992px) {
   h4,
 .mil-h4 {
     font-size: 24px;
+    font-weight: bold;
   }
 }
 @media screen and (max-width: 768px) {
   h4,
 .mil-h4 {
     font-size: 22px;
+    font-weight: bold;
   }
 }
 
@@ -291,11 +334,13 @@ h5,
 .mil-h5 {
   font-size: 20px;
   line-height: 150%;
+  font-weight: bold;
 }
 @media screen and (max-width: 768px) {
   h5,
 .mil-h5 {
     font-size: 18px;
+    font-weight: bold;
   }
 }
 
@@ -303,23 +348,27 @@ h6,
 .mil-h6 {
   font-size: 18px;
   line-height: 150%;
+  font-weight: bold;
 }
 @media screen and (max-width: 1200px) {
   h6,
 .mil-h6 {
     font-size: 17px;
+    font-weight: bold;
   }
 }
 @media screen and (max-width: 992px) {
   h6,
 .mil-h6 {
     font-size: 16px;
+    font-weight: bold;
   }
 }
 @media screen and (max-width: 768px) {
   h6,
 .mil-h6 {
     font-size: 21px;
+    font-weight: bold;
   }
 }
 
@@ -398,6 +447,7 @@ a {
 
 .mil-muted {
   color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
 }
 
 .mil-dark {
@@ -427,6 +477,16 @@ a {
 
 .mil-right {
   text-align: right;
+}
+@media screen and (min-width: 1200px) {
+  .mil-content{
+
+    background-color: rgb(255, 255, 255);
+  }
+  .mil-banner .mil-dark-bg{
+
+    background-color: rgb(0, 0, 0);
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -563,8 +623,8 @@ link
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
-      -ms-flex-direction: -reverse;
-          flex-direction: -reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 .mil-link.mil-icon-left svg {
   margin-left: 0;
@@ -685,7 +745,7 @@ textarea {
   padding: 0 30px;
   width: 100%;
   font-size: 12px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-weight: 500;
   font-family: "Outfit", sans-serif;
@@ -700,28 +760,28 @@ textarea:focus {
 }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   font-size: 12px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.5);
 }
 input::-moz-placeholder, textarea::-moz-placeholder {
   font-size: 12px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.5);
 }
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   font-size: 12px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.5);
 }
 input::-ms-input-placeholder, textarea::-ms-input-placeholder {
   font-size: 12px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.5);
@@ -729,7 +789,7 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder {
 input::placeholder,
 textarea::placeholder {
   font-size: 12px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.5);
@@ -737,7 +797,7 @@ textarea::placeholder {
 
 textarea {
   padding: 15px 30px;
-  height: 300px;
+  height: 150px;
 }
 
 /* -------------------------------------------
@@ -810,14 +870,19 @@ breadcrumbs
           justify-content: center;
 }
 
-/* -------------------------------------------
 
+/* -------------------------------------------
+mil-dark-bg
 backgrounds
 
 ------------------------------------------- */
+
 .mil-dark-bg {
   position: relative;
-  background-color: black;
+  /* background-color: rgb(255, 255, 255); */
+  -webkit-backdrop-filter: invert(100%);
+  backdrop-filter: invert(100%);
+
 }
 .mil-dark-bg:before {
   content: "";
@@ -826,9 +891,15 @@ backgrounds
   position: absolute;
   pointer-events: none;
   z-index: 2;
-  -webkit-backdrop-filter: invert(100%);
-          /* backdrop-filter: invert(100%); */
+  background-color: rgb(0, 0, 0);
+  /* -webkit-backdrop-filter: invert(100%);
+          backdrop-filter: invert(100%); */
+          -webkit-backdrop-filter: invert(100%);
+          backdrop-filter: invert(100%);
+
 }
+
+
 .mil-dark-bg .mi-invert-fix {
   height: 100%;
   position: relative;
@@ -1223,6 +1294,9 @@ frame
   width: 100%;
   height: 100%;
 }
+
+
+
 @media screen and (max-width: 1200px) {
   .mil-frame {
     padding: 30px;
@@ -1238,11 +1312,13 @@ frame
 @media screen and (max-width: 1200px) {
   .mil-frame .mil-frame-top {
     height: 90px;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color:#ffad32;
     border-bottom: solid 1px rgba(255, 255, 255, 0.1);
     padding: 0 30px;
     -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+
+
   }
   .mil-frame .mil-frame-top .mil-logo {
     color: rgb(255, 255, 255);
@@ -1264,6 +1340,7 @@ frame
       -ms-flex-align: end;
           align-items: flex-end;
 }
+
 @media screen and (max-width: 1200px) {
   .mil-frame .mil-frame-bottom {
     display: none;
@@ -1280,12 +1357,12 @@ frame
   -webkit-transform: rotate(-90deg) translateX(138px) translateY(-138px);
           transform: rotate(-90deg) translateX(138px) translateY(-138px);
 }
-.mil-frame .mil-frame-bottom .mil-back-to-top {
+/* .mil-frame .mil-frame-bottom .mil-back-to-top {
   width: 300px;
   -webkit-transform: rotate(-90deg) translateX(130px) translateY(130px);
           transform: rotate(-90deg) translateX(130px) translateY(130px);
   pointer-events: all;
-}
+} */
 
 .mil-frame-top {
   display: -webkit-box;
@@ -1297,7 +1374,11 @@ frame
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /* background-color: #FF9800; */
+  /* z-index: 999; */
 }
+
+
 .mil-frame-top .mil-logo {
   pointer-events: all;
   color: rgb(0, 0, 0);
@@ -1323,6 +1404,9 @@ menu button
           align-items: center;
   -webkit-transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
+  /* background-color: aqua; */
+
+
 }
 @media screen and (max-width: 992px) {
   .mil-menu-btn {
@@ -1330,18 +1414,25 @@ menu button
             transform: scale(0.85);
   }
 }
+
 .mil-menu-btn span, .mil-menu-btn span:after, .mil-menu-btn span:before {
   content: "";
   display: block;
   width: 28px;
   height: 2.5px;
-  backdrop-filter: invert(100%);
-  /* background: rgb(0, 0, 0); */
+  /* background: rgb(255, 255, 255); */
+  background: linear-gradient(to right, #6a3093, #a044ff);
+
+
+
+  /* backdrop-filter: invert(100%); */
+
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-transition: inherit;
   transition: inherit;
 }
+
 .mil-menu-btn span {
   position: relative;
 }
@@ -1420,6 +1511,7 @@ menu
             transform: translateY(30px);
   }
 }
+
 .mil-menu-frame .mil-menu-right-frame {
   padding-left: 60px;
   position: relative;
@@ -1528,7 +1620,14 @@ menu
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
+          align-items:flex-start;
+          padding-top: 200px;
+
+
+
+
+
+
 }
 .mil-main-menu ul {
   padding: 0;
@@ -1676,9 +1775,7 @@ menu
 banner
 
 ------------------------------------------- */
-.mil-banner {
-  height: 100vh;
-}
+
 .mil-banner .container {
   height: 100%;
   display: -webkit-box;
@@ -1687,6 +1784,7 @@ banner
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+          padding-top: 100px;
 }
 .mil-banner .mil-banner-content {
   width: 100%;
@@ -4241,54 +4339,157 @@ html.is-animating .mil-menu-frame {
 
 
 
-.card {
-  width: 500px;
-  height: 250px;
-  perspective: 1000px;
-  padding-top: 30px;
+
+
+/*--------------------- Current Event Card--------------- */
+.card__container {
+  margin-top:20px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  flex-wrap:wrap;
+  gap:50px;
+  padding-bottom: 100px;
+
 }
 
-.card-inner {
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.999s;
+.card__article {
+  position: relative;
+  overflow: hidden;
+
 }
 
-.card:hover .card-inner {
-  transform: rotateY(180deg);
+.card__img {
+  width: 328px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 1.5rem;
 }
-
-.card-front,
-.card-back {
+.card__data {
+  width: 80%;
+  max-width: 80%;
+  background-color: white;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+  border-radius: 1rem;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
+  bottom: -9rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s 1s;
+  box-sizing: border-box;
+  height: auto;
+  max-height: 100%;
 }
 
-.card-front {
-  background-color: #FF9800;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  border-radius: 8px;
-  justify-content: left;
-  font-size: 30px;
-  transform: rotateY(0deg);
+
+
+.card__description {
+  display: block;
+  font-size: 12px;
+  margin-bottom: .25rem;
+  color:rgb(0, 0, 0);
+  /* background: linear-gradient(to right, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;  */
 }
 
-.card-back {
-  background-color: #f8b859;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  border: 10px solid #FF9800;
-  border-radius: 10px;
-  justify-content: center;
-  font-size: 18px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 20px;
-  transform: rotateY(180deg);
+.card__title {
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  margin-bottom: .7green
+}
+
+.card__button {
+  text-decoration: none;
+  font-size: var(--small-font-size);
+  font-weight: bold;
+  color: rgb(174, 204, 21);
+}
+
+.card__button:hover {
+  text-decoration: underline;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgba(170, 170, 170, 0.454);
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 90%;
+  text-align: left;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+.text-overlay:empty {
+  background-color: transparent;
+  padding: 0;
+  display: none;
+}
+
+
+
+.card__article:hover .card__data {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.card__article:hover {
+  animation: remove-overflow 2s forwards;
+}
+
+.card__article:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+
+.card__article:not(:hover) .card__data {
+  animation: remove-data 1s forwards;
+}
+
+@keyframes show-data {
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(-7rem);
+  }
+}
+
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+    transform: translateY(-7rem);
+  }
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(.5rem);
+  }
+}
+
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+    pointer-events: none;
+  }
+  50% {
+    overflow: hidden;
+  }
 }
