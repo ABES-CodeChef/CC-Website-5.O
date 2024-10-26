@@ -192,9 +192,31 @@ h6,
   color: rgb(0, 0, 0);
   font-weight: bold;
   line-height: 120%;
-  /* background: linear-gradient(to right, #f32170, #ff6b08,#cf23cf, #056cf4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
+  /* Comment below code for removing gradient text effect */
+    /* 1 Effect */
+      /* background: linear-gradient(to right, #f32170, #ff6b08,#cf23cf, #056cf4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; */
+    /* 2 Effect */
+      /* background: #781697;
+      background: linear-gradient(to right, #c04ced 6%, #f83f3f 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; */
+
+    /* 3 Effect */
+      /* background: #1282de;
+        background: linear-gradient(to right, #de1212,#db12de 50% );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
+
+      
+
+      
+
+      
+
+  
+
 }
 @media screen and (max-width: 768px) {
   h1 br,
@@ -447,7 +469,7 @@ a {
 
 .mil-muted {
   color: rgba(255, 255, 255, 0.9);
-  padding: 30px;
+  padding: 10px;
 }
 
 .mil-dark {
@@ -455,7 +477,7 @@ a {
 }
 
 .mil-light-soft {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.73);
 }
 
 .mil-dark-soft {
@@ -659,18 +681,22 @@ button
   background-color: rgb(255, 152, 0);
   color: rgb(0, 0, 0);
   border-radius: 70px;
-  padding: 0 15px 0 50px;
+  /* padding: 0 15px 0 50px; */
+  padding:10px;
   height: 70px;
   text-transform: uppercase;
   font-weight: 500;
   -webkit-transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
+  
+  
 }
 .mil-button span {
   white-space: nowrap;
+  text-align: center;
 }
 .mil-button svg {
-  margin-left: 30px;
+  margin-left: 10px;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -726,7 +752,7 @@ button
 @media screen and (max-width: 992px) {
   .mil-button {
     height: 60px;
-    padding: 0 10px 0 40px;
+    padding: 10px;
   }
   .mil-button svg {
     margin-left: 25px;
@@ -2667,7 +2693,8 @@ team
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 60px 30px;
+  /* padding: 60px 30px; */
+ padding: 10px; 
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2677,10 +2704,11 @@ team
           flex-direction: column;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: flex-end;
+          justify-content: center;
   pointer-events: none;
   -webkit-transition: 0.6s cubic-bezier(0, 0, 0.3642, 1);
   transition: 0.6s cubic-bezier(0, 0, 0.3642, 1);
+  /* margin:10px; */
 }
 .mil-team-card .mil-description .mil-secrc-text {
   opacity: 0;
