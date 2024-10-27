@@ -16,10 +16,130 @@
     <!-- fancybox css -->
     <link rel="stylesheet" href="css/plugins/fancybox.min.css">
     <!-- ashley scss -->
-    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- page name -->
     <title>CodeChef ABESEC Chapter</title>
     <link rel="icon" type="image/x-icon" href="img/logos/CodeChef ABESEC.png">
+
+    <link rel="stylesheet" href="css/cardnew.scss">
+
+
+    <style>
+        .container {
+  padding: 40px 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cardnew-wrap {
+  margin: 10px;
+  transform: perspective(800px);
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+  
+.cardnew-wrap:hover .cardnew-info {
+  transform: translateY(0);
+}
+
+.cardnew-wrap:hover .cardnew-info p {
+  opacity: 1;
+}
+
+.cardnew-wrap:hover .cardnew-info,
+.cardnew-wrap:hover .cardnew-info p {
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.cardnew-wrap:hover .cardnew-info:after {
+  transition: 5s cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cardnew-wrap:hover .cardnew-bg {
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 5s cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 0.8;
+}
+
+.cardnew-wrap:hover .cardnew {
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 2s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: rgba(255, 255, 255, 0.2) 0 0 40px 5px, rgba(255, 255, 255, 1) 0 0 0 1px,
+              rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset #fff 0 0 0 6px;
+}
+
+.cardnew {
+  position: relative;
+  flex: 0 0 240px;
+  width: 320px;
+  height: 320px;
+  background-color: #333;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px,
+              inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
+  transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.cardnew-bg {
+  opacity: 0.5;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  pointer-events: none;
+}
+
+.cardnew-info {
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  transform: translateY(40%);
+  transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.cardnew-info p {
+  opacity: 0;
+  text-shadow: rgba(0, 0, 0, 1) 0 2px 3px;
+  transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.cardnew-info * {
+  position: relative;
+  z-index: 1;
+}
+
+.cardnew-info:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+  background-blend-mode: overlay;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.cardnew-info h1 {
+  font-family: "Playfair Display";
+  font-size: 36px;
+  font-weight: 700;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
+}
+
+    </style>
 
 </head>
 
@@ -32,7 +152,7 @@
         <div class="mil-ball">
             <span class="mil-icon-1">
                 <svg viewBox="0 0 128 128">
-                    <path d="M106.1,41.9c-1.2-1.2-3.1-1.2-4.2,0c-1.2,1.2-1.2,3.1,0,4.2L116.8,61H11.2l14.9-14.9c1.2-1.2,1.2-3.1,0-4.2    c-1.2-1.2-3.1-1.2-4.2,0l-20,20c-1.2,1.2-1.2,3.1,0,4.2l20,20c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9c1.2-1.2,1.2-3.1,0-4.2   L11.2,67h105.5l-14.9,14.9c-1.2,1.2-1.2,3.1,0,4.2c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9l20-20c1.2-1.2,1.2-3.1,0-4.2L106.1,41.9 z" />
+                    <path d="M106.1,41.9c-1.2-1.2-3.1-1.2-4.2,0c-1.2,1.2-1.2,3.1,0,4.2L116.8,61H11.2l14.9-14.9c1.2-1.2,1.2-3.1,0-4.2	c-1.2-1.2-3.1-1.2-4.2,0l-20,20c-1.2,1.2-1.2,3.1,0,4.2l20,20c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9c1.2-1.2,1.2-3.1,0-4.2	L11.2,67h105.5l-14.9,14.9c-1.2,1.2-1.2,3.1,0,4.2c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9l20-20c1.2-1.2,1.2-3.1,0-4.2L106.1,41.9	z" />
                 </svg>
             </span>
             <div class="mil-more-text">More</div>
@@ -41,7 +161,7 @@
         <!-- cursor end -->
 
         <!-- preloader -->
-        <div class="mil-preloader">
+        <!-- <div class="mil-preloader">
             <div class="mil-preloader-animation">
                 <div class="mil-pos-abs mil-animation-1">
                     <p class="mil-h3 mil-muted mil-thin">Cook</p>
@@ -55,7 +175,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- preloader end -->
 
         <!-- scrollbar progress -->
@@ -98,7 +218,7 @@
                                         </ul>
                                     </li>
                                     <li class="mil-has-children">
-             e                           <a href="#.">Services</a>
+                                        <a href="#.">Services</a>
                                         <ul>
                                             <li><a href="services.html">Services List</a></li>
                                             <li><a href="service.html">Single service</a></li>
@@ -241,11 +361,11 @@
 
                         <div class="mil-lines-place"></div>
                         <div class="mil-lines-place mil-lines-long"></div>
-
+                        <div id="app" class="container">
                         <div class="row justify-content-between align-items-center">
                             <div class="col-lg-5">
 
-                                <a href="project-1.html" class="mil-portfolio-item mil-more mil-mb-60">
+                                <!-- <a href="project-1.html" class="mil-portfolio-item mil-more mil-mb-60">
                                     <div class="mil-cover-frame mil-vert mil-up">
                                         <div class="mil-cover">
                                             <img src="img/works/4/Rusted.jpg" alt="cover" style="width: 450px; height: auto;">
@@ -258,31 +378,22 @@
                                         </div>
                                         <h4 class="mil-up">Rust-Ed</h4>
                                     </div>
-                                </a>
+                                </a> -->
+
+                                <cardnew data-image="https://i.ibb.co/PT5S9LW/Whats-App-Image-2024-07-04-at-23-32-37-f248b4f9.jpg"></cardnew>
+                                <template v-slot:header>
+                                  <h1>Rust-Ed</h1>
+                                </template>
+                                <template v-slot:content>
+                                  <p>Tech-Stack || 8 July 2024</p>
+                                </template>
+                              </cardnew>
+
 
                             </div>
+                            <div class="col-lg-6">
 
-                            <div class="col-lg-5">
-
-                                <a href="project-2.html" class="mil-portfolio-item mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-vert mil-up">
-                                        <div class="mil-cover">
-                                            <img src="img/works/4/error.jpeg" alt="cover" style="width: 450px; height: auto;">
-                                        </div>
-                                    </div>
-                                    <div class="mil-descr">
-                                        <div class="mil-labels mil-up mil-mb-15">
-                                            <div class="mil-label mil-upper mil-accent">Debugging</div>
-                                            <div class="mil-label mil-upper">27-29 May 2024</div>
-                                        </div>
-                                        <h4 class="mil-up">T-Error 3.O</h4>
-                                    </div>
-                                </a>
-
-                            </div>
-                            <!-- <div class="col-lg-6">
-
-                                <a href="project-2.html" class="mil-portfolio-item mil-more mil-parallax mil-mb-60" data-value-1="60" data-value-2="-60">
+                                <!-- <a href="project-2.html" class="mil-portfolio-item mil-more mil-parallax mil-mb-60" data-value-1="60" data-value-2="-60">
                                     <div class="mil-cover-frame mil-hori mil-up">
                                         <div class="mil-cover">
                                             <img src="img/works/4/error.jpeg" alt="cover" style="width: 450px; height: auto;">
@@ -295,12 +406,21 @@
                                         </div>
                                         <h4 class="mil-up">T-Error 3.O</h4>
                                     </div>
-                                </a>
+                                </a> -->
 
-                            </div> -->
+                                <cardnew data-image="https://i.ibb.co/NWQ0Zc2/Whats-App-Image-2024-06-16-at-13-13-47-cdc36e8e.jpg"></cardnew>
+                                <template v-slot:header>
+                                  <h1>T-Error 3.O</h1>
+                                </template>
+                                <template v-slot:content>
+                                  <p>Debugging || 27-29 May 2024</p>
+                                </template>
+                              </cardnew>
+
+                            </div>
                             <div class="col-lg-6">
 
-                                <a href="project-3.html" class="mil-portfolio-item mil-more mil-parallax mil-mb-60" data-value-1="60" data-value-2="-60">
+                                <!-- <a href="project-3.html" class="mil-portfolio-item mil-more mil-parallax mil-mb-60" data-value-1="60" data-value-2="-60">
                                     <div class="mil-cover-frame mil-hori mil-up">
                                         <div class="mil-cover">
                                             <img src="img/works/4/beyond.png" alt="cover" style="width: 450px; height: auto;">
@@ -313,12 +433,23 @@
                                         </div>
                                         <h4 class="mil-up">Beyond Code</h4>
                                     </div>
-                                </a>
+                                </a> -->
+
+                                
+                                    <cardnew data-image="https://i.ibb.co/qM2qDrt/BEYOND-CODE-1.png"></cardnew>
+                                      <template v-slot:header>
+                                        <h1>Beyond Code</h1>
+                                      </template>
+                                      <template v-slot:content>
+                                        <p>Tech Stack || 25 May 2024</p>
+                                      </template>
+                                    </cardnew>
+                                
 
                             </div>
                             <div class="col-lg-5">
 
-                                <a href="project-4.html" class="mil-portfolio-item mil-more mil-mb-60">
+                                <!-- <a href="project-4.html" class="mil-portfolio-item mil-more mil-mb-60">
                                     <div class="mil-cover-frame mil-vert mil-up">
                                         <div class="mil-cover">
                                             <img src="img/works/4/crime.jpg" alt="cover" style="width: 450px; height: auto;">
@@ -331,12 +462,22 @@
                                         </div>
                                         <h4 class="mil-up">Once Upon a Crime</h4>
                                     </div>
-                                </a>
+                                </a> -->
+
+                                <cardnew data-image="https://i.ibb.co/d48tShy/Standee-Fn.jpg"></cardnew>
+                                <template v-slot:header>
+                                  <h1>Once Upon a Crime</h1>
+                                </template>
+                                <template v-slot:content>
+                                  <p>Treasure Hunt || 12-13 Dec 2023</p>
+                                </template>
+                              </cardnew>
+
 
                             </div>
                             <div class="col-lg-5">
 
-                                <a href="project-5.html" class="mil-portfolio-item mil-more mil-mb-60">
+                                <!-- <a href="project-5.html" class="mil-portfolio-item mil-more mil-mb-60">
                                     <div class="mil-cover-frame mil-vert mil-up">
                                         <div class="mil-cover">
                                             <img src="img/coc/1.jpg" alt="cover" style="width: 450px; height: auto;">
@@ -347,33 +488,23 @@
                                             <div class="mil-label mil-upper mil-accent">Design</div>
                                             <div class="mil-label mil-upper">21 Dec 2023</div>
                                         </div>
-                                        <h4 class="mil-up">Clash Of Coders 3.O</h4>
+                                        <h4 class="mil-up">Clash Of Coders 2.O</h4>
                                     </div>
-                                </a>
+                                </a> -->
+
+                                <cardnew data-image="https://i.ibb.co/vj16cqg/COC-poster.jpg"></cardnew>
+                                <template v-slot:header>
+                                  <h1>Clash Of Coders 2.O</h1>
+                                </template>
+                                <template v-slot:content>
+                                  <p>Design || 21 Dec 2023</p>
+                                </template>
+                              </cardnew>
 
                             </div>
+                            <div class="col-lg-6">
 
-                            <div class="col-lg-5">
-
-                                <a href="project-6.html" class="mil-portfolio-item mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-vert mil-up">
-                                        <div class="mil-cover">
-                                            <img src="img/works/4/headnode.png" alt="cover" style="width: 450px; height: auto;">
-                                        </div>
-                                    </div>
-                                    <div class="mil-descr">
-                                        <div class="mil-labels mil-up mil-mb-15">
-                                            <div class="mil-label mil-upper mil-accent">Info Session</div>
-                                            <div class="mil-label mil-upper">09 Dec 2023</div>
-                                        </div>
-                                        <h4 class="mil-up">Head Node</h4>
-                                    </div>
-                                </a>
-
-                            </div>
-                            <!-- <div class="col-lg-6">
-
-                                <a href="project-6.html" class="mil-portfolio-item mil-more mil-parallax mil-mb-60" data-value-1="60" data-value-2="-60">
+                                <!-- <a href="project-6.html" class="mil-portfolio-item mil-more mil-parallax mil-mb-60" data-value-1="60" data-value-2="-60">
                                     <div class="mil-cover-frame mil-hori mil-up">
                                         <div class="mil-cover">
                                             <img src="img/works/4/headnode.png" alt="cover" style="width: 450px; height: auto;">
@@ -386,10 +517,20 @@
                                         </div>
                                         <h4 class="mil-up">Head Node</h4>
                                     </div>
-                                </a>
+                                </a> -->
 
-                            </div> -->
+                                <cardnew data-image="https://i.ibb.co/xzb64zT/Codechef-1.png"></cardnew>
+                                <template v-slot:header>
+                                  <h1>Head Node</h1>
+                                </template>
+                                <template v-slot:content>
+                                  <p>Info Session || 09 Dec 2023</p>
+                                </template>
+                              </cardnew>
+
+                            </div>
                         </div>
+                    </div>
                     </div>
                 </section>
                 <!-- portfolio end -->
@@ -600,9 +741,9 @@
                         </div>
                     </div>
 
-                    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="mil-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="mil-arrow">
                         <path d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z" />
-                    </svg> -->
+                    </svg>
 
                     <svg width="250" viewBox="0 0 300 1404" fill="none" xmlns="http://www.w3.org/2000/svg" class="mil-lines">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M1 892L1 941H299V892C299 809.71 232.29 743 150 743C67.7096 743 1 809.71 1 892ZM0 942H300V892C300 809.157 232.843 742 150 742C67.1573 742 0 809.157 0 892L0 942Z" class="mil-move" />
@@ -641,6 +782,91 @@
     <script src="js/plugins/ScrollTo.min.js"></script>
     <!-- ashley js -->
     <script src="js/main.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script type="text/babel">
+        Vue.config.devtools = true;
+    
+        Vue.component('cardnew', {
+          template: `
+            <div class="cardnew-wrap"
+              @mousemove="handleMouseMove"
+              @mouseenter="handleMouseEnter"
+              @mouseleave="handleMouseLeave"
+              ref="cardnew">
+              <div class="cardnew" :style="cardStyle">
+                <div class="cardnew-bg" :style="[cardBgTransform, cardBgImage]"></div>
+                <div class="cardnew-info">
+                  <slot name="header"></slot>
+                  <slot name="content"></slot>
+                </div>
+              </div>
+            </div>`,
+          mounted() {
+            this.width = this.$refs.cardnew.offsetWidth;
+            this.height = this.$refs.cardnew.offsetHeight;
+          },
+          props: ['dataImage'],
+          data() {
+            return {
+              width: 0,
+              height: 0,
+              mouseX: 0,
+              mouseY: 0,
+              mouseLeaveDelay: null
+            };
+          },
+          computed: {
+            mousePX() {
+              return this.mouseX / this.width;
+            },
+            mousePY() {
+              return this.mouseY / this.height;
+            },
+            cardStyle() {
+              const rX = this.mousePX * 30;
+              const rY = this.mousePY * -30;
+              return {
+                transform: 'rotateY(${rX}deg) rotateX(${rY}deg)'
+              };
+            },
+            cardBgTransform() {
+              const tX = this.mousePX * -40;
+              const tY = this.mousePY * -40;
+              return {
+                transform: 'translateX(${tX}px) translateY(${tY}px)'
+              };
+            },
+            cardBgImage() {
+              return {
+                backgroundImage: 'url(${this.dataImage})'
+              };
+            }
+          },
+          methods: {
+            handleMouseMove(e) {
+              const rect = this.$refs.cardnew.getBoundingClientRect();
+              this.mouseX = e.clientX - rect.left - this.width / 2;
+              this.mouseY = e.clientY - rect.top - this.height / 2;
+            },
+            handleMouseEnter() {
+              clearTimeout(this.mouseLeaveDelay);
+            },
+            handleMouseLeave() {
+              this.mouseLeaveDelay = setTimeout(() => {
+                this.mouseX = 0;
+                this.mouseY = 0;
+              }, 1000);
+            }
+          }
+        });
+    
+        new Vue({
+          el: '#app'
+        });
+      </script>
+
 
 </body>
 
