@@ -4532,3 +4532,11 @@ html.is-animating .mil-menu-frame {
     overflow: hidden;
   }
 }
+#know-more{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 50px;
+  height: 55px;
+}
