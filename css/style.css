@@ -596,11 +596,11 @@ button
   justify-content: center;
   border: none;
   letter-spacing: 2px;
-  font-size: 12px;
+  font-size: 13px;
   background-color: rgb(255, 152, 0);
   color: rgb(0, 0, 0);
   border-radius: 70px;
-  padding: 0 40px 0 50px;
+  padding: 0 40px 0 40px;
   height: 70px;
   text-transform: uppercase;
   font-weight: 500;
@@ -4394,8 +4394,8 @@ input[type="radio"] {
 
 .carousel-container {
   width: 100%;
-  max-width: 600px;
-  max-height: 400px;
+  max-width: 650px;
+  max-height: 500px;
   height: 100%;
   perspective: 1000px;
   display: flex;
