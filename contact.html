@@ -296,7 +296,7 @@
                             <div class="row justify-content-between">
                                 <div class="col-md-4 col-lg-4 mil-mb-60">
 
-                                    <div class="mil-muted mil-logo mil-up mil-mb-30">Ashley.</div>
+                                    <div class="mil-muted mil-logo mil-up mil-mb-30">Codechef ABESEC Chapter</div>
 
                                     <p class="mil-light-soft mil-up mil-mb-30">Subscribe our newsletter:</p>
 
@@ -313,7 +313,8 @@
 
                                             <nav class="mil-footer-menu mil-mb-60">
                                                 <ul>
-                                                    <li class="mil-up mil-active">
+                                                    <li class="mil-up ">
+                                                    <li class="mil-up ">
                                                         <a href="home-1.html">Home</a>
                                                     </li>
                                                     <li class="mil-up">
@@ -322,7 +323,8 @@
                                                     <li class="mil-up">
                                                         <a href="services.html">Services</a>
                                                     </li>
-                                                    <li class="mil-up">
+                                                    <li class="mil-up mil-active">
+                                                    <li class="mil-up mil-active">
                                                         <a href="contact.html">Contact</a>
                                                     </li>
                                                     <li class="mil-up">
@@ -410,58 +412,68 @@
     <script>
         const form = document.querySelector("form");
 
-            form.addEventListener("submit", (e) => {
-                let username = document.querySelector("#name").value;
-                let email = document.querySelector("#email").value;
-                let message = document.querySelector("#message").value;
-                let subject = document.querySelector("#subject").value;
-                let messageBody = `Name: ${username} \n Email: ${email} \n Message: ${message}`;
-                e.preventDefault();
-                if (validateInputs(username, email, message)) {
-                    sendEmail(messageBody, subject);
+        form.addEventListener("submit", (e) => {
+            let username = document.querySelector("#name").value;
+            let email = document.querySelector("#email").value;
+            let message = document.querySelector("#message").value;
+            let subject = document.querySelector("#subject").value;
+            let messageBody = `Name: ${username} \n Email: ${email} \n Message: ${message}`;
+            e.preventDefault();
+            if (validateInputs(username, email, message)) {
+                sendEmail(messageBody, subject);
+            }
+        });
+        let validateInputs = (username, email, message) => {
+            if (username === "" || email === "" || message === "") {
+                Swal.fire({
+                    title: "Error!",
+                    text: "Please fill all the fields!",
+                    icon: "error",
+                });
+                return false;
+            } else if (!validateEmail(email)) {
+                Swal.fire({
+                    title: "Error!",
+                    text: "Please enter a valid email!",
+                    icon: "error",
+                });
+                return false;
+            } else {
+                return true;
+            }
+        };
+        let validateEmail = (email) => {
+            const re = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
+            return re.test(email);
+        };
+
+        let sendEmail = (messageBody, Subject) => {
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "codechef@abes.ac.in",
+                Password: "3692DEA930CB877EDD379E52B57CACF9372C",
+                To: "codechef@abes.ac.in",
+                From: "codechef@abes.ac.in",
+                Subject: Subject,
+                Body: messageBody,
+            }).then((message) => {
+                if (message === "OK") {
+                    Swal.fire({
+                        title: "Success!",
+                        text: "Message sent succesfully!",
+                        icon: "success",
+                    });
+                    form.reset();
+                }
+                else {
+                    Swal.fire({
+                        title: "Error!",
+                        text: "Something went wrong!",
+                        icon: "error",
+                    });
                 }
             });
-            let validateInputs = (username, email, message) => {
-                if (username === "" || email === "" || message === "") {
-                    Swal.fire({
-                        title: "Error!",
-                        text: "Please fill all the fields!",
-                        icon: "error",
-                    });
-                    return false;
-                } else if (!validateEmail(email)) {
-                    Swal.fire({
-                        title: "Error!",
-                        text: "Please enter a valid email!",
-                        icon: "error",
-                    });
-                    return false;
-                } else {
-                    return true;
-                }
-            };
-            let validateEmail = (email) => {
-                const re = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
-                return re.test(email);
-            };
-
-            let sendEmail = (messageBody, Subject) => {
-                Email.send({
-                    SecureToken: "539a95a0-ee77-4607-bf1b-67a1cc15a033",
-                    To: "codechef@abes.ac.in",
-                    From: "codechef@abes.ac.in",
-                    Subject: Subject,
-                    Body: messageBody,
-                }).then((message) => {
-                    if (message === "OK") {
-                        Swal.fire({
-                            title: "Success!",
-                            text: "Message sent succesfully!",
-                            icon: "success",
-                        });
-                    }
-                });
-            };
+        };
 
     </script>
     <!-- jQuery js -->
