@@ -57,7 +57,7 @@ We welcome contributions from everyone! Whether you're fixing bugs, adding new f
 2. *Clone Your Fork*  
    Clone your forked repository to your local machine:
    bash
-   git clone https://github.com/yourusername/club-website.git
+   git clone https://github.com/yourusername/CC-Website-5.O.git
    
 
 3. *Create a New Branch*  
