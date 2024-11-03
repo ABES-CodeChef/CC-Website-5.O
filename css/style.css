@@ -4371,32 +4371,43 @@ html.is-animating .mil-menu-frame {
 
 /*--------------------- Current Event Card--------------- */
 .card__container {
-  margin-top:20px;
+  margin-top:40px;
   display: flex;
   flex-direction: row;
   justify-content:space-evenly;
   flex-wrap:wrap;
   gap:50px;
   padding-bottom: 100px;
-
+  padding-top: 65px;
 }
+
 
 .card__article {
   position: relative;
   overflow: hidden;
-
+  box-shadow: 0 0 28px 10px rgba(122, 66, 178, 0.575);
+  border-radius: 1.5rem;
 }
 
 .card__img {
-  width: 328px;
-  height: 350px;
+  background: rgba( 255, 255, 255, 0.25 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 1.5rem; 
+  width: 340px;
+  height: 290px;
   object-fit: cover;
-  border-radius: 1.5rem;
+  overflow: hidden;
 }
 .card__data {
   width: 80%;
   max-width: 80%;
-  background-color: white;
+  background: rgba(84, 36, 132, 0.527);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 8px );
+  -webkit-backdrop-filter: blur( 7.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
   padding: 1.5rem 2rem;
   box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
   border-radius: 1rem;
@@ -4410,6 +4421,8 @@ html.is-animating .mil-menu-frame {
   box-sizing: border-box;
   height: auto;
   max-height: 100%;
+
+  font-size: 18px;
 }
 
 
@@ -4418,16 +4431,14 @@ html.is-animating .mil-menu-frame {
   display: block;
   font-size: 12px;
   margin-bottom: .25rem;
-  color:rgb(0, 0, 0);
-  /* background: linear-gradient(to right, #ff7e5f, #feb47b);
-    -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;  */
+  color: white;
+  font-size: 16px;
 }
 
 .card__title {
   font-size: var(--h2-font-size);
   font-weight: 500;
-  color: rgb(0, 0, 0);
+  color: white;
   margin-bottom: .7green
 }
 
@@ -4520,4 +4531,12 @@ html.is-animating .mil-menu-frame {
   50% {
     overflow: hidden;
   }
+}
+#know-more{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 50px;
+  height: 55px;
 }
