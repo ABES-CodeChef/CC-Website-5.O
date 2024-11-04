@@ -77,6 +77,10 @@ html,
 body {
   padding: 0;
   margin: 0;
+  /* collab team change */
+  width: 100%;
+  height: 100%;
+  /* collab team end change */
   font-family: "Outfit", sans-serif;
   font-size: 16px;
   font-weight: 300;
@@ -4539,4 +4543,377 @@ html.is-animating .mil-menu-frame {
   padding-right: 15px;
   border-radius: 50px;
   height: 55px;
+}
+
+.card {
+  width: 500px;
+  height: 250px;
+  perspective: 1000px;
+  padding-top: 30px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: #ff9800;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  justify-content: left;
+  font-size: 30px;
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  background-color: #f8b859;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border: 10px solid #ff9800;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  transform: rotateY(180deg);
+}
+
+.fistbump {
+  font-size: 10rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.left-fist,
+.right-fist {
+  animation: ease-in; /* Start without any animation */
+}
+
+@keyframes left-windup {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes left-bump {
+  100% {
+    transform: translateX(10%);
+  }
+}
+
+@keyframes left-post {
+  50% {
+    transform: translateX(15%) scaleX(0.9) scaleY(1.1);
+  }
+  100% {
+    transform: translateX(10%) scaleX(1) scaleY(1);
+  }
+}
+
+@keyframes right-windup {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes right-bump {
+  100% {
+    transform: translateX(-10%);
+  }
+}
+
+@keyframes right-post {
+  50% {
+    transform: translateX(-15%) scaleX(0.9) scaleY(1.1);
+  }
+  100% {
+    transform: translateX(-10%) scaleX(1) scaleY(1);
+  }
+}
+
+input[type="radio"] {
+  display: none; /* Hide radio buttons */
+}
+
+.carousel-container {
+  width: 100%;
+  max-width: 650px;
+  max-height: 500px;
+  height: 100%;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-cards {
+  position: relative;
+  width: 100%;
+  height: 120vh;
+  margin-bottom: 20px;
+  transform-style: preserve-3d;
+}
+
+.carousel-card {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+.carousel-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 5px 5px 10px 8px rgba(212, 179, 179, 0.347);
+}
+
+/* Active card centered and enlarged */
+#carousel-item-1:checked ~ .carousel-cards #carousel-song-1,
+#carousel-item-2:checked ~ .carousel-cards #carousel-song-2,
+#carousel-item-3:checked ~ .carousel-cards #carousel-song-3,
+#carousel-item-4:checked ~ .carousel-cards #carousel-song-4,
+#carousel-item-5:checked ~ .carousel-cards #carousel-song-5,
+#carousel-item-6:checked ~ .carousel-cards #carousel-song-6 {
+  transform: translateX(0) scale(1);
+  z-index: 2;
+}
+
+/* Right-side cards (smaller and positioned to the right) */
+#carousel-item-1:checked ~ .carousel-cards #carousel-song-2,
+#carousel-item-2:checked ~ .carousel-cards #carousel-song-3,
+#carousel-item-3:checked ~ .carousel-cards #carousel-song-4,
+#carousel-item-4:checked ~ .carousel-cards #carousel-song-5,
+#carousel-item-5:checked ~ .carousel-cards #carousel-song-6,
+#carousel-item-6:checked ~ .carousel-cards #carousel-song-1 {
+  transform: translateX(50%) scale(0.7);
+  z-index: 1;
+}
+
+/* Left-side cards (smaller and positioned to the left) */
+#carousel-item-1:checked ~ .carousel-cards #carousel-song-6,
+#carousel-item-2:checked ~ .carousel-cards #carousel-song-1,
+#carousel-item-3:checked ~ .carousel-cards #carousel-song-2,
+#carousel-item-4:checked ~ .carousel-cards #carousel-song-3,
+#carousel-item-5:checked ~ .carousel-cards #carousel-song-4,
+#carousel-item-6:checked ~ .carousel-cards #carousel-song-5 {
+  transform: translateX(-50%) scale(0.7);
+  z-index: 1;
+}
+
+/* Further diminished cards for additional images */
+#carousel-item-1:checked ~ .carousel-cards #carousel-song-3,
+#carousel-item-2:checked ~ .carousel-cards #carousel-song-4,
+#carousel-item-3:checked ~ .carousel-cards #carousel-song-5,
+#carousel-item-4:checked ~ .carousel-cards #carousel-song-6,
+#carousel-item-5:checked ~ .carousel-cards #carousel-song-1,
+#carousel-item-6:checked ~ .carousel-cards #carousel-song-2 {
+  transform: translateX(100%) scale(0.5);
+  z-index: 0;
+}
+
+#carousel-item-1:checked ~ .carousel-cards #carousel-song-5,
+#carousel-item-2:checked ~ .carousel-cards #carousel-song-6,
+#carousel-item-3:checked ~ .carousel-cards #carousel-song-1,
+#carousel-item-4:checked ~ .carousel-cards #carousel-song-2,
+#carousel-item-5:checked ~ .carousel-cards #carousel-song-3,
+#carousel-item-6:checked ~ .carousel-cards #carousel-song-4 {
+  transform: translateX(-100%) scale(0.5);
+  z-index: 0;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .carousel-card {
+    width: 80%;
+  }
+  .carousel-cards {
+    height: 350px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.hm-card-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  padding: 20px;
+}
+
+.hm-card-wrapper-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% / 3 - 40px); /* Three cards in a row with descriptions */
+  margin-bottom: 50px; /* Add space between cards */
+}
+
+.hm-card-item {
+  width: 100%; /* Ensures that the card takes up the full width of the wrapper */
+  height: 20rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 36px;
+  perspective: 2500px;
+}
+
+.hm-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hm-card-wrapper {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.hm-card-item:hover .hm-card-wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.hm-card-wrapper::before,
+.hm-card-wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+
+.hm-card-wrapper::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+.hm-card-wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+.hm-card-item:hover .hm-card-wrapper::before,
+.hm-card-wrapper::after {
+  opacity: 1;
+}
+
+.hm-card-item:hover .hm-card-wrapper::after {
+  height: 120px;
+}
+
+.hm-card-title {
+  width: 100%;
+  transition: transform 0.5s;
+}
+
+.hm-card-item:hover .hm-card-title {
+  transform: translate3d(0%, -50px, 100px);
+}
+
+.hm-card-character {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+
+.hm-card-item:hover .hm-card-character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
+
+.hm-card-description {
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+  margin-top: 30px;
+  width: 100%; /* Takes full width to align with the card */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hm-card-wrapper-container {
+    width: calc(100% / 2 - 40px); /* Two cards in a row for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .hm-card-wrapper-container {
+    width: 100%; /* One card per row for mobile */
+    margin-bottom: 50px; /* Add more space between cards */
+  }
+
+  .hm-card-description {
+    margin-top: 15px;
+    font-size: 0.9rem; /* Slightly smaller text for mobile */
+  }
+}
+#footer_text{
+  font-size:36px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  /* display:flex;
+  gap:10px; */
+}
+
+@media screen and (max-width:380px) {
+  #footer_text{
+  font-size: 30px;
+  }
 }
