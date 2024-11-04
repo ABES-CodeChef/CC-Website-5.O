@@ -405,10 +405,17 @@
         <!-- content -->
     </div>
     <!-- wrapper end -->
-    <!-- SMTP js -->
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
+    <!-- Email js -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "vcZPyPN_-HQPwAAMw",
+            });
+        })();
+    </script>
     <script>
         const form = document.querySelector("form");
 
@@ -419,8 +426,14 @@
             let subject = document.querySelector("#subject").value;
             let messageBody = `Name: ${username} \n Email: ${email} \n Message: ${message}`;
             e.preventDefault();
+            const params = {
+                name: username,
+                reply_to: email,
+                message: messageBody,
+                subject: subject,
+            };
             if (validateInputs(username, email, message)) {
-                sendEmail(messageBody, subject);
+                sendEmail(params);
             }
         });
         let validateInputs = (username, email, message) => {
@@ -447,35 +460,30 @@
             return re.test(email);
         };
 
-        let sendEmail = (messageBody, Subject) => {
-            Email.send({
-                Host: "smtp.elasticemail.com",
-                Username: "codechef@abes.ac.in",
-                Password: "3692DEA930CB877EDD379E52B57CACF9372C",
-                To: "codechef@abes.ac.in",
-                From: "codechef@abes.ac.in",
-                Subject: Subject,
-                Body: messageBody,
-            }).then((message) => {
-                if (message === "OK") {
+        let sendEmail = (params) => {
+            emailjs.send('service_jpi1sis', 'template_keadus6', params).then(
+                (response) => {
+                    console.log('SUCCESS!', response.status, response.text);
                     Swal.fire({
                         title: "Success!",
-                        text: "Message sent succesfully!",
+                        text: "Your message has been sent!",
                         icon: "success",
                     });
                     form.reset();
-                }
-                else {
+                },
+                (error) => {
+                    console.log('FAILED...', error);
                     Swal.fire({
                         title: "Error!",
                         text: "Something went wrong!",
                         icon: "error",
                     });
-                }
-            });
+                },
+            );
         };
 
     </script>
+
     <!-- jQuery js -->
     <script src="js/plugins/jquery.min.js"></script>
     <!-- swup js -->
