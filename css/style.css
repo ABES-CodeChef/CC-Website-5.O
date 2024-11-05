@@ -691,9 +691,7 @@ button
   text-transform: uppercase;
   font-weight: 500;
   -webkit-transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
-  transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
-  
-  
+  transition: 0.4s cubic-bezier(0, 0, 0.3642, 1); 
 }
 .mil-button span {
   white-space: nowrap;
@@ -763,6 +761,7 @@ button
   }
 }
 
+
 /* -------------------------------------------
 
 form
@@ -791,6 +790,7 @@ textarea:focus {
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   font-size: 12px;
   /* text-transform: uppercase; */
+  font-size: 18px;
   letter-spacing: 2px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.5);
@@ -1321,10 +1321,19 @@ frame
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100%; 
 }
-
+ 
+/* .mil-frame-top{
+width: 100%;
+background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 3px );
+-webkit-backdrop-filter: blur( 3px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+} */
 
 
 @media screen and (max-width: 1200px) {
@@ -1341,13 +1350,18 @@ frame
 }
 @media screen and (max-width: 1200px) {
   .mil-frame .mil-frame-top {
-    height: 90px;
-    background-color:#ffad32;
-    border-bottom: solid 1px rgba(255, 255, 255, 0.1);
-    padding: 0 30px;
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
+    height: 75px;
 
+    border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+    padding: 5px 30px;
+    -webkit-backdrop-filter: blur(8px);
+    /* backdrop-filter: blur(8px); */
+
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 
   }
   .mil-frame .mil-frame-top .mil-logo {
@@ -4903,17 +4917,21 @@ input[type="radio"] {
     font-size: 0.9rem; /* Slightly smaller text for mobile */
   }
 }
+
+
 #footer_text{
   font-size:36px;
   font-weight: bold;
   line-height: 1.5;
   margin-bottom: 20px;
-  /* display:flex;
-  gap:10px; */
 }
 
 @media screen and (max-width:380px) {
   #footer_text{
-  font-size: 30px;
-  }
+  font-size:30px;
+  }
+}
+
+input::placeholder, textarea::placeholder {
+  font-size: 18px; /* Adjust the size as needed */
 }

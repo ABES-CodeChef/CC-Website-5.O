@@ -194,24 +194,27 @@
         background-color: #333;
         overflow: hidden;
         border-radius: 10px;
+        box-sizing: border-box;
         box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px,
                     inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
         transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
       }
-      
+
+    
       .cardnew-bg {
-        opacity: 0.5;
         position: absolute;
-        top: -20px;
-        left: -20px;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        padding: 20px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        opacity: 0.5;
+        transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1);
         pointer-events: none;
+        filter: brightness(1.2) contrast(1.1);
+        
       }
       
       .cardnew-info {
@@ -355,13 +358,13 @@
                                         <li><a href="publication.html">Publication</a></li>
                                     </ul> -->
                                 </li>
-                                <li class="mil-has-children">
-                                    <a href="Resources.html">Resources</a>
+                                <!-- <li class="mil-has-children"> -->
+                                    <!-- <a href="Resources.html">Resources</a> -->
                                     <!-- <ul>
                                         <li><a href="Achievements.html">Blog List</a></li>
                                         <li><a href="publication.html">Publication</a></li>
                                     </ul> -->
-                                </li>
+                                <!-- </li> -->
                                 
                                 <!-- <li class="mil-has-children">
                                     <a href="#.">Other pages</a>
@@ -513,16 +516,17 @@
                                     </div>
                                 </a> -->
 
+
                                 <cardnew data-image="https://i.ibb.co/PT5S9LW/Whats-App-Image-2024-07-04-at-23-32-37-f248b4f9.webp"></cardnew>
+
                                 <template v-slot:header>
-                                  <h1>Rust-Ed</h1>
+                                  <h3>Rust-Ed</h3>
                                 </template>
                                 <template v-slot:content>
                                   <p>Tech-Stack || 8 July 2024</p>
                                 </template>
                               </cardnew>
-
-
+                              </a>
                             </div>
                             <div class="col-lg-6">
 
@@ -541,18 +545,19 @@
                                     </div>
                                 </a> -->
 
+
                                 <cardnew data-image="https://i.ibb.co/NWQ0Zc2/Whats-App-Image-2024-06-16-at-13-13-47-cdc36e8e.webp"></cardnew>
+
                                 <template v-slot:header>
-                                  <h1>T-Error 3.O</h1>
+                                  <h3>T-Error 3.O</h3>
                                 </template>
                                 <template v-slot:content>
                                   <p>Debugging || 27-29 May 2024</p>
                                 </template>
                               </cardnew>
-
+                              </a>
                             </div>
                             <div class="col-lg-6">
-
                                 <!-- <a href="project-3.html" class="mil-portfolio-item mil-more mil-parallax mil-mb-60" data-value-1="60" data-value-2="-60">
                                     <div class="mil-cover-frame mil-hori mil-up">
                                         <div class="mil-cover">
@@ -570,17 +575,18 @@
 
                                 
                                     <cardnew data-image="https://i.ibb.co/qM2qDrt/BEYOND-CODE-1.webp"></cardnew>
+
                                       <template v-slot:header>
-                                        <h1>Beyond Code</h1>
+                                        <h3>Beyond Code</h3>
                                       </template>
                                       <template v-slot:content>
                                         <p>Tech Stack || 25 May 2024</p>
                                       </template>
                                     </cardnew>
-                                
+                                </a>
 
                             </div>
-                            <div class="col-lg-5">
+                            <div class="col-lg-6">
 
                                 <!-- <a href="project-4.html" class="mil-portfolio-item mil-more mil-mb-60">
                                     <div class="mil-cover-frame mil-vert mil-up">
@@ -597,15 +603,17 @@
                                     </div>
                                 </a> -->
 
+
                                 <cardnew data-image="https://i.ibb.co/d48tShy/Standee-Fn.webp"></cardnew>
+
                                 <template v-slot:header>
-                                  <h1>Once Upon a Crime</h1>
+                                  <h3>Once Upon a Crime</h3>
                                 </template>
                                 <template v-slot:content>
                                   <p>Treasure Hunt || 12-13 Dec 2023</p>
                                 </template>
                               </cardnew>
-
+                              </a>
 
                             </div>
                             <div class="col-lg-5">
@@ -625,15 +633,17 @@
                                     </div>
                                 </a> -->
 
+
                                 <cardnew data-image="https://i.ibb.co/vj16cqg/COC-poster.webp"></cardnew>
+
                                 <template v-slot:header>
-                                  <h1>Clash Of Coders 2.O</h1>
+                                  <h3>COC 2.O</h3>
                                 </template>
                                 <template v-slot:content>
                                   <p>Design || 21 Dec 2023</p>
                                 </template>
                               </cardnew>
-
+                              </a>
                             </div>
                             <div class="col-lg-6">
 
@@ -652,15 +662,17 @@
                                     </div>
                                 </a> -->
 
+
                                 <cardnew data-image="https://i.ibb.co/xzb64zT/Codechef-1.webp"></cardnew>
+
                                 <template v-slot:header>
-                                  <h1>Head Node</h1>
+                                  <h3>Head Node</h3>
                                 </template>
                                 <template v-slot:content>
                                   <p>Info Session || 09 Dec 2023</p>
                                 </template>
                               </cardnew>
-
+                              </a>
                             </div>
                         </div>
                     </div>
@@ -680,7 +692,7 @@
                                 <div class="mil-center">
                                     
                                         
-                                    <div class="mil-up"><a href="Contact.html" class="mil-button mil-arrow-place"><span>Contact us</span></a></div>
+                                   <div class="mil-up"><a href="contact.html" class="mil-button mil-arrow-place mil-mb-60" id="know-more"><span>Contact us</span></a></div>
                                 
                                 </div>
                             </div>
@@ -690,254 +702,125 @@
                 <!-- call to action end -->
 
                 <footer class="mil-dark-bg">
-                    <div class="mi-invert-fix">
-                        <div class="mil-animation-frame">
-                            <div class="mil-animation mil-position-1 mil-scale" data-value-1="2.4" data-value-2="1.4" style="top: 300px; right: -100px; translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(1.7298, 1.7298);"><div class="mil-dodecahedron">
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div></div>
-                            <div class="mil-animation mil-position-2 mil-scale" data-value-1="2" data-value-2="1" style="left: 150px; translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(1.0476, 1.0476);"><div class="mil-dodecahedron">
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div></div>
-                        </div>
-                        <div class="container mil-p-120-60">
-                            <div class="row justify-content-between">
-                                <div class="col-md-4 col-lg-4 mil-mb-60">
-                                    <div class="mil-muted mil-thin" style="font-size: 28px;font-weight: bold;line-height: 1.5;margin-bottom: 20px;">CodeChef ABESEC Chapter</div>
-                                    <form class="mil-subscribe-form mil-up" style="translate: none;rotate: none;scale: none;transform: translate(0px, 0px);opacity: 1;margin-bottom: 20px;">
-                                        <input type="email" placeholder="Enter Your Email" required="">
-                                        <button type="submit" class="mil-button mil-icon-button-sm mil-arrow-place"></button>
-                                    </form>
-                                </div>
-                                <div class="col-md-7 col-lg-6">
-                                    <div class="row justify-content-end">
-                                        <div class="col-md-6 col-lg-7" style="margin-top: 10px;">
-                                            <nav class="mil-footer-menu mil-mb-60" style="align-content: center;">
-                                                <ul>
-                                                    <li class="mil-up mil-active" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><a href="Home.html">Home</a></li>
-                                                    <li class="mil-up" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><a href="Events.html">Events</a></li>
-                                                    <li class="mil-up" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><a href="Contact.html">Contact
-                                                            Us</a></li>
-                                                    <li class="mil-up" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><a href="Team.html">Team</a></li>
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                        <div class="col-md-6 col-lg-5">
-                                            <div class="mil-mb-60">
-                                                <div class="mil-muted mil-thin" style="font-size: 18px; font-weight: bold;">Contact
-                                                    Us</div>
-                                                <p class="mil-light-soft mil-up" style="margin-bottom: 20px;translate: none;rotate: none;scale: none;transform: translate(0px, 40px) scale(0.98, 0.98);opacity: 0;">
-                                                    19th KM Stone, NH-09,
-                                                    Ghaziabad - 201009,
-                                                    Uttar Pradesh, India
-                                                    <span class="mil-no-wrap">+91
-                                                        1207 135 112</span>
-                                                </p>
-                                                <ul class="mil-social-icons mil-up" style="display: flex; gap: 15px; padding-left: 0px; margin-top: 20px; translate: none; rotate: none; scale: none; transform: translate(0px, 40px) scale(0.98, 0.98); opacity: 0;">
-                                                    <li><a href="mailto:codechef@abes.ac.in" target="_blank" rel="noopener noreferrer" class="social-icon">
-                                                            <i class="far fa-envelope" style="font-size: 24px; transition: transform 0.3s ease;"></i></a>
-                                                    </li>
-                                                    <li><a href="https://www.instagram.com/abesec.codechef/" target="_blank" rel="noopener noreferrer" class="social-icon">
-                                                            <i class="fab fa-instagram" style="font-size: 24px; transition: transform 0.3s ease;"></i></a>
-                                                    </li>
-                                                    <li><a href="https://www.linkedin.com/company/codechef-abesec-chapter/" target="_blank" rel="noopener noreferrer" class="social-icon">
-                                                            <i class="fab fa-linkedin" style="font-size: 24px; transition: transform 0.3s ease;"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Map Section -->
-                                    <!-- <div class="container"
-                                        style="margin-top: 0%;">
-                                        <iframe
-                                            src="https://maps.google.com/maps?q=ABES+Engineering+College&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                                            width="100%" height="200"
-                                            frameborder="0"
-                                            style="border: 0;"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </div> -->
-                            </div>
-
-                            <div class="col-md-4 col-lg-6 mil-mb-60">
-                                <div class="mil-vert-between">
-                                    <div class="mil-mb-30" style="display: flex; align-items: center; justify-content: flex-start;">
-                                        <p class="mil-light-soft mil-up" style="text-align: left; margin-right: 40px; margin-top: 20px; translate: none; rotate: none; scale: none; transform: translate(0px, 40px) scale(0.98, 0.98); opacity: 0;">
-                                            © 2024 CodeChef ABESEC. All
-                                            rights reserved.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div></footer>
+                  <div class="mi-invert-fix">
+                      <div class="mil-animation-frame">
+                          <div
+                              class="mil-animation mil-position-1 mil-scale"
+                              data-value-1="2.4" data-value-2="1.4"
+                              style="top: 300px; right: -100px"></div>
+                          <div
+                              class="mil-animation mil-position-2 mil-scale"
+                              data-value-1="2" data-value-2="1"
+                              style="left: 150px"></div>
+                      </div>
+                      <div class="container mil-p-120-60">
+                          <div class="row justify-content-between">
+                              <div class="col-md-4 col-lg-4 mil-mb-60">
+                                  <div class="mil-muted mil-thin" id="footer_text">CodeChef ABESEC Chapter</div>
+                                  <div class="mil-up"><a href="contact.html" class="mil-button mil-arrow-place mil-mb-60" id="know-more"><span>Contact us</span></a></div>
+                                  <div><p class="mil-light-soft mil-up"
+                                      style="text-align: center;">
+                                      © 2024 CodeChef ABESEC. All rights reserved.
+                                  </p></div>
+                              </div>
+                              <div class="col-md-7 col-lg-6">
+                                  <div class="row justify-content-end">
+                                      <div class="col-md-6 col-lg-7"
+                                          style="margin-top: 30px;">
+                                          <nav
+                                              class="mil-footer-menu mil-mb-60"
+                                              style="align-content: center;">
+                                              <ul>
+                                                  <li
+                                                      class="mil-up mil-active"><a
+                                                          href="Home.html">Home</a></li>
+                                                  <li class="mil-up"><a
+                                                          href="Events.html">Events</a></li>
+                                                  <li class="mil-up"><a
+                                                          href="Team.html">Team
+                                                          </a></li>
+                                                  <li class="mil-up"><a
+                                                      href="Achievements.html">Achievements</a></li>
+                                              </ul>
+                                          </nav>
+                                      </div>
+                                      <div class="col-md-6 col-lg-5">
+                                          <div class="mil-mb-60">
+                                              <!-- <div
+                                                  class="mil-muted mil-thin"
+                                                  style="font-size: 18px; font-weight: bold;">Contact
+                                                  Us</div> -->
+                                              <p
+                                                  class="mil-light-soft mil-up"
+                                                  style="margin-bottom: 0;">
+                                                  19th KM Stone, NH-09,
+                                                  Ghaziabad - 201009,
+                                                  Uttar Pradesh, India
+                                                  <span
+                                                      class="mil-no-wrap">+91
+                                                      1207 135 112</span>
+                                              </p>
+                                              <ul
+                                                  class="mil-social-icons mil-up"
+                                                  style="display: flex; gap: 15px; padding-left: 0; margin-top: 20px;">
+                                                  <li><a
+                                                          href="mailto:codechef@abes.ac.in"
+                                                          target="_blank"
+                                                          rel="noopener noreferrer"
+                                                          class="social-icon">
+                                                          <i
+                                                              class="far fa-envelope"
+                                                              style="font-size: 24px; transition: transform 0.3s ease;"></i></a>
+                                                  </li>
+                                                  <li><a
+                                                          href="https://www.instagram.com/abesec.codechef/"
+                                                          target="_blank"
+                                                          rel="noopener noreferrer"
+                                                          class="social-icon">
+                                                          <i
+                                                              class="fab fa-instagram"
+                                                              style="font-size: 24px; transition: transform 0.3s ease;"></i></a>
+                                                  </li>
+                                                  <li><a
+                                                          href="https://www.linkedin.com/company/codechef-abesec-chapter/"
+                                                          target="_blank"
+                                                          rel="noopener noreferrer"
+                                                          class="social-icon">
+                                                          <i
+                                                              class="fab fa-linkedin"
+                                                              style="font-size: 24px; transition: transform 0.3s ease;"></i></a>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <!-- Map Section -->
+                                  <!-- <div class="container"
+                                      style="margin-top: 0%;">
+                                      <iframe
+                                          src="https://maps.google.com/maps?q=ABES+Engineering+College&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                          width="100%" height="200"
+                                          frameborder="0"
+                                          style="border: 0;"
+                                          allowfullscreen></iframe>
+                                  </div>
+                              </div> -->
+                              <!-- <div class="col-md-4 col-lg-6 mil-mb-60">
+                                  <div class="mil-vert-between">
+                                      <div class="mil-mb-30"
+                                          style="display: flex; align-items: center; justify-content: flex-start;">
+                                          <p class="mil-light-soft mil-up"
+                                              style="text-align: left; margin-right: 40px; margin-top: 20px;">
+                                              © 2024 CodeChef ABESEC. All
+                                              rights reserved.
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div> -->
+                          </div>
+                      </div>
+                  </div>
+              </footer>
 
                 <!-- hidden elements -->
                 <div class="mil-hidden-elements">
