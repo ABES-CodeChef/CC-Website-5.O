@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/cardnew.scss">
 
 
-    <style>
+    <!-- <style>
         .container {
   padding: 40px 80px;
   display: flex;
@@ -139,8 +139,123 @@
   text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
 }
 
-    </style>
+    </style> -->
 
+    <style>
+    .container {
+        padding: 40px 80px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .cardnew-wrap {
+        margin: 10px;
+        transform: perspective(800px);
+        transform-style: preserve-3d;
+        cursor: pointer;
+      }
+        
+      .cardnew-wrap:hover .cardnew-info {
+        transform: translateY(0);
+      }
+      
+      .cardnew-wrap:hover .cardnew-info p {
+        opacity: 1;
+      }
+      
+      .cardnew-wrap:hover .cardnew-info,
+      .cardnew-wrap:hover .cardnew-info p {
+        transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      
+      .cardnew-wrap:hover .cardnew-info:after {
+        transition: 5s cubic-bezier(0.23, 1, 0.32, 1);
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      .cardnew-wrap:hover .cardnew-bg {
+        transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 5s cubic-bezier(0.23, 1, 0.32, 1);
+        opacity: 0.8;
+      }
+      
+      .cardnew-wrap:hover .cardnew {
+        transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 2s cubic-bezier(0.23, 1, 0.32, 1);
+        box-shadow: rgba(255, 255, 255, 0.2) 0 0 40px 5px, rgba(255, 255, 255, 1) 0 0 0 1px,
+                    rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset #fff 0 0 0 6px;
+      }
+      
+      .cardnew {
+        position: relative;
+        flex: 0 0 240px;
+        width: 320px;
+        height: 320px;
+        background-color: #333;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px,
+                    inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
+        transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      }
+      
+      .cardnew-bg {
+        opacity: 0.5;
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        pointer-events: none;
+      }
+      
+      .cardnew-info {
+        padding: 20px;
+        position: absolute;
+        bottom: 0;
+        color: #fff;
+        transform: translateY(40%);
+        transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+      
+      .cardnew-info p {
+        opacity: 0;
+        text-shadow: rgba(0, 0, 0, 1) 0 2px 3px;
+        transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+      
+      .cardnew-info * {
+        position: relative;
+        z-index: 1;
+      }
+      
+      .cardnew-info:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+        background-blend-mode: overlay;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      }
+      
+      .cardnew-info h1 {
+        font-family: "Playfair Display";
+        font-size: 36px;
+        font-weight: 700;
+        text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
+      }
+      </style>
 </head>
 
 <body>
@@ -184,7 +299,7 @@
         </div>
         <!-- scrollbar progress end -->
 
-<!-- New Menu frame start -->
+ <!-- New Menu frame start -->
         <!-- menu -->
         <div class="mil-menu-frame">
 
@@ -233,21 +348,6 @@
                                             <li><a href="publication.html">Publication</a></li>
                                         </ul> -->
                                     </li>
-                                    <li class="mil-has-children">
-                                        <a href="blog.html">Achievements</a>
-                                        <!-- <ul>
-                                            <li><a href="blog.html">Blog List</a></li>
-                                            <li><a href="publication.html">Publication</a></li>
-                                        </ul> -->
-                                    </li>
-                                    <li class="mil-has-children">
-                                        <a href="resources.html">Resources</a>
-                                        <!-- <ul>
-                                            <li><a href="blog.html">Blog List</a></li>
-                                            <li><a href="publication.html">Publication</a></li>
-                                        </ul> -->
-                                    </li>
-                                    
                                     <!-- <li class="mil-has-children">
                                         <a href="#.">Other pages</a>
                                         <ul>
@@ -325,6 +425,7 @@
         </div>
         <!-- menu -->
 <!--New Menu Frame End  -->
+
         <!-- curtain -->
         <div class="mil-curtain"></div>
         <!-- curtain end -->
@@ -403,7 +504,7 @@
                                 </template>
                                 <template v-slot:content>
                                   <p>Tech-Stack || 8 July 2024</p>
-                             a   </template>
+                                </template>
                               </cardnew>
 
 
@@ -573,142 +674,255 @@
                 </section>
                 <!-- call to action end -->
 
-                               <!-- Footer -->
-                               <footer class="mil-dark-bg">
-                                <div class="mi-invert-fix">
-                                    <div class="mil-animation-frame">
-                                        <div
-                                            class="mil-animation mil-position-1 mil-scale"
-                                            data-value-1="2.4" data-value-2="1.4"
-                                            style="top: 300px; right: -100px"></div>
-                                        <div
-                                            class="mil-animation mil-position-2 mil-scale"
-                                            data-value-1="2" data-value-2="1"
-                                            style="left: 150px"></div>
+                <footer class="mil-dark-bg">
+                    <div class="mi-invert-fix">
+                        <div class="mil-animation-frame">
+                            <div class="mil-animation mil-position-1 mil-scale" data-value-1="2.4" data-value-2="1.4" style="top: 300px; right: -100px; translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(1.7298, 1.7298);"><div class="mil-dodecahedron">
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div></div>
+                            <div class="mil-animation mil-position-2 mil-scale" data-value-1="2" data-value-2="1" style="left: 150px; translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(1.0476, 1.0476);"><div class="mil-dodecahedron">
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div></div>
+                        </div>
+                        <div class="container mil-p-120-60">
+                            <div class="row justify-content-between">
+                                <div class="col-md-4 col-lg-4 mil-mb-60">
+                                    <div class="mil-muted mil-thin" style="font-size: 28px;font-weight: bold;line-height: 1.5;margin-bottom: 20px;">CodeChef ABESEC Chapter</div>
+                                    <form class="mil-subscribe-form mil-up" style="translate: none;rotate: none;scale: none;transform: translate(0px, 0px);opacity: 1;margin-bottom: 20px;">
+                                        <input type="email" placeholder="Enter Your Email" required="">
+                                        <button type="submit" class="mil-button mil-icon-button-sm mil-arrow-place"></button>
+                                    </form>
+                                </div>
+                                <div class="col-md-7 col-lg-6">
+                                    <div class="row justify-content-end">
+                                        <div class="col-md-6 col-lg-7" style="margin-top: 10px;">
+                                            <nav class="mil-footer-menu mil-mb-60" style="align-content: center;">
+                                                <ul>
+                                                    <li class="mil-up mil-active" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><a href="home-1.html">Home</a></li>
+                                                    <li class="mil-up" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><a href="portfolio-1.html">Events</a></li>
+                                                    <li class="mil-up" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><a href="contact.html">Contact
+                                                            Us</a></li>
+                                                    <li class="mil-up" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><a href="team.html">Team</a></li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                        <div class="col-md-6 col-lg-5">
+                                            <div class="mil-mb-60">
+                                                <div class="mil-muted mil-thin" style="font-size: 18px; font-weight: bold;">Contact
+                                                    Us</div>
+                                                <p class="mil-light-soft mil-up" style="margin-bottom: 20px;translate: none;rotate: none;scale: none;transform: translate(0px, 40px) scale(0.98, 0.98);opacity: 0;">
+                                                    19th KM Stone, NH-09,
+                                                    Ghaziabad - 201009,
+                                                    Uttar Pradesh, India
+                                                    <span class="mil-no-wrap">+91
+                                                        1207 135 112</span>
+                                                </p>
+                                                <ul class="mil-social-icons mil-up" style="display: flex; gap: 15px; padding-left: 0px; margin-top: 20px; translate: none; rotate: none; scale: none; transform: translate(0px, 40px) scale(0.98, 0.98); opacity: 0;">
+                                                    <li><a href="mailto:codechef@abes.ac.in" target="_blank" rel="noopener noreferrer" class="social-icon">
+                                                            <i class="far fa-envelope" style="font-size: 24px; transition: transform 0.3s ease;"></i></a>
+                                                    </li>
+                                                    <li><a href="https://www.instagram.com/abesec.codechef/" target="_blank" rel="noopener noreferrer" class="social-icon">
+                                                            <i class="fab fa-instagram" style="font-size: 24px; transition: transform 0.3s ease;"></i></a>
+                                                    </li>
+                                                    <li><a href="https://www.linkedin.com/company/codechef-abesec-chapter/" target="_blank" rel="noopener noreferrer" class="social-icon">
+                                                            <i class="fab fa-linkedin" style="font-size: 24px; transition: transform 0.3s ease;"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="container mil-p-120-60">
-                                        <div class="row justify-content-between">
-                                            <div class="col-md-4 col-lg-4 mil-mb-60">
-                                                <div class="mil-muted mil-thin" id="footer_text">CodeChef ABESEC Chapter</div>
-                                                <!-- <form class="mil-subscribe-form mil-up">
-                                                    <input type="email"
-                                                        placeholder="Enter Your Email"
-                                                        required>
-                                                    <button type="submit"
-                                                        class="mil-button mil-icon-button-sm mil-arrow-place"></button>
-                                                </form> -->
-                                            </div>
-                                            <div class="col-md-7 col-lg-6">
-                                                <div class="row justify-content-end">
-                                                    <div class="col-md-6 col-lg-7"
-                                                        style="margin-top: 30px;">
-                                                        <nav
-                                                            class="mil-footer-menu mil-mb-60"
-                                                            style="align-content: center;">
-                                                            <ul>
-                                                                <li
-                                                                    class="mil-up mil-active"><a
-                                                                        href="home-1.html">Home</a></li>
-                                                                <li class="mil-up"><a
-                                                                        href="portfolio-1.html">Events</a></li>
-                                                                <li class="mil-up"><a
-                                                                        href="team.html">Team
-                                                                        Us</a></li>
-                                                                <li class="mil-up"><a
-                                                                        href="contact.html">Contact</a></li>
-                                                                <li class="mil-up"><a
-                                                                    href="blog.html">Achievements</a></li>
-                                                                <li class="mil-up"><a
-                                                                    href="resources.html">Resources</a></li>
-                                                            </ul>
-                                                        </nav>
-                                                    </div>
-                                                    <div class="col-md-6 col-lg-5">
-                                                        <div class="mil-mb-60">
-                                                            <div
-                                                                class="mil-muted mil-thin"
-                                                                style="font-size: 18px; font-weight: bold;">Contact
-                                                                Us</div>
-                                                            <p
-                                                                class="mil-light-soft mil-up"
-                                                                style="margin-bottom: 0;">
-                                                                19th KM Stone, NH-09,
-                                                                Ghaziabad - 201009,
-                                                                Uttar Pradesh, India
-                                                                <span
-                                                                    class="mil-no-wrap">+91
-                                                                    1207 135 112</span>
-                                                            </p>
-                                                            <ul
-                                                                class="mil-social-icons mil-up"
-                                                                style="display: flex; gap: 15px; padding-left: 0; margin-top: 20px;">
-                                                                <li><a
-                                                                        href="mailto:codechef@abes.ac.in"
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        class="social-icon">
-                                                                        <i
-                                                                            class="far fa-envelope"
-                                                                            style="font-size: 24px; transition: transform 0.3s ease;"></i></a>
-                                                                </li>
-                                                                <li><a
-                                                                        href="https://www.instagram.com/abesec.codechef/"
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        class="social-icon">
-                                                                        <i
-                                                                            class="fab fa-instagram"
-                                                                            style="font-size: 24px; transition: transform 0.3s ease;"></i></a>
-                                                                </li>
-                                                                <li><a
-                                                                        href="https://www.linkedin.com/company/codechef-abesec-chapter/"
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        class="social-icon">
-                                                                        <i
-                                                                            class="fab fa-linkedin"
-                                                                            style="font-size: 24px; transition: transform 0.3s ease;"></i></a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- Map Section -->
-                                                <!-- <div class="container"
-                                                    style="margin-top: 0%;">
-                                                    <iframe
-                                                        src="https://maps.google.com/maps?q=ABES+Engineering+College&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                                                        width="100%" height="200"
-                                                        frameborder="0"
-                                                        style="border: 0;"
-                                                        allowfullscreen></iframe>
-                                                </div>
-                                            </div> -->
-                                        </div>
-            
-                                        <div class="col-md-4 col-lg-6 mil-mb-60">
-                                            <div class="mil-vert-between">
-                                                <div class="mil-mb-30"
-                                                    style="display: flex; align-items: center; justify-content: flex-start;">
-                                                    <p class="mil-light-soft mil-up"
-                                                        style="text-align: left; margin-right: 40px; margin-top: 20px;">
-                                                        © 2024 CodeChef ABESEC. All
-                                                        rights reserved.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <!-- Map Section -->
+                                    <!-- <div class="container"
+                                        style="margin-top: 0%;">
+                                        <iframe
+                                            src="https://maps.google.com/maps?q=ABES+Engineering+College&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                            width="100%" height="200"
+                                            frameborder="0"
+                                            style="border: 0;"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div> -->
+                            </div>
+
+                            <div class="col-md-4 col-lg-6 mil-mb-60">
+                                <div class="mil-vert-between">
+                                    <div class="mil-mb-30" style="display: flex; align-items: center; justify-content: flex-start;">
+                                        <p class="mil-light-soft mil-up" style="text-align: left; margin-right: 40px; margin-top: 20px; translate: none; rotate: none; scale: none; transform: translate(0px, 40px) scale(0.98, 0.98); opacity: 0;">
+                                            © 2024 CodeChef ABESEC. All
+                                            rights reserved.
+                                        </p>
                                     </div>
                                 </div>
-                            </footer>
-                            <!-- footer end -->
-                            <!--Footer Animation Start-->
-                            <style>
-                            .social-icon:hover i {
-                            transform: scale(1.2); /* Scale up icon on hover */
-                            }
-                            </style>
-                            <!--Footer Animation End-->
+                            </div>
+                        </div>
+                    </div>
+                </div></footer>
 
                 <!-- hidden elements -->
                 <div class="mil-hidden-elements">
@@ -843,7 +1057,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
-    <script type="text/babel">
+    <!-- <script type="text/babel">
         Vue.config.devtools = true;
     
         Vue.component('cardnew', {
@@ -899,6 +1113,88 @@
             cardBgImage() {
               return {
                 backgroundImage: 'url(${this.dataImage})'
+              };
+            }
+          },
+          methods: {
+            handleMouseMove(e) {
+              const rect = this.$refs.cardnew.getBoundingClientRect();
+              this.mouseX = e.clientX - rect.left - this.width / 2;
+              this.mouseY = e.clientY - rect.top - this.height / 2;
+            },
+            handleMouseEnter() {
+              clearTimeout(this.mouseLeaveDelay);
+            },
+            handleMouseLeave() {
+              this.mouseLeaveDelay = setTimeout(() => {
+                this.mouseX = 0;
+                this.mouseY = 0;
+              }, 1000);
+            }
+          }
+        });
+    
+        new Vue({
+          el: '#app'
+        });
+      </script> -->
+
+      <script type="text/babel">
+        Vue.config.devtools = true;
+    
+        Vue.component('cardnew', {
+          template: `
+            <div class="cardnew-wrap"
+              @mousemove="handleMouseMove"
+              @mouseenter="handleMouseEnter"
+              @mouseleave="handleMouseLeave"
+              ref="cardnew">
+              <div class="cardnew" :style="cardStyle">
+                <div class="cardnew-bg" :style="[cardBgTransform, cardBgImage]"></div>
+                <div class="cardnew-info">
+                  <slot name="header"></slot>
+                  <slot name="content"></slot>
+                </div>
+              </div>
+            </div>`,
+          mounted() {
+            this.width = this.$refs.cardnew.offsetWidth;
+            this.height = this.$refs.cardnew.offsetHeight;
+          },
+          props: ['dataImage'],
+          data() {
+            return {
+              width: 0,
+              height: 0,
+              mouseX: 0,
+              mouseY: 0,
+              mouseLeaveDelay: null
+            };
+          },
+          computed: {
+            mousePX() {
+              return this.mouseX / this.width;
+            },
+            mousePY() {
+              return this.mouseY / this.height;
+            },
+            cardStyle() {
+              const rX = this.mousePX * 30;
+              const rY = this.mousePY * -30;
+              return {
+                transform: `rotateY(${rX}deg) rotateX(${rY}deg)`
+              };
+            },
+            cardBgTransform() {
+              const tX = this.mousePX * -40;
+              const tY = this.mousePY * -40;
+              return {
+                transform: `translateX(${tX}px) translateY(${tY}px)`
+              };
+            },
+            cardBgImage() {
+              return {
+                backgroundImage: `url(${this.dataImage})`
               };
             }
           },
