@@ -5,7 +5,7 @@ The official CodeChef ABESec club website is designed to showcase the events, ac
 ## 🚀 Deployed Project
 You can explore the website directly by clicking the link below:
 
-🔗 [CodeChef ABESec Club Website](https://codechefabesec.netlify.app/home)
+🔗 [CodeChef ABESec Club Website](https://codechefabesec.netlify.app/Home)
 
 
 ## Table of Contents
@@ -99,7 +99,7 @@ We welcome contributions from everyone! Whether you're fixing bugs, adding new f
 ---
 ## TODO LIST
 
-- [ ] Finalize the home page design
+- [ ] Finalize the Home page design
 - [ ] Ensure mobile responsiveness for all pages
 - [ ] Add About Us section
 - [ ] Implement Blog section for club update

@@ -34,7 +34,7 @@ p.s. I am available for Freelance hire (UI design, web development). email: mill
     - about
     - partners
     - services
-    - team
+    - Team
     - social icons
     - revievs
     - blog
@@ -77,10 +77,10 @@ html,
 body {
   padding: 0;
   margin: 0;
-  /* collab team change */
+  /* collab Team change */
   width: 100%;
   height: 100%;
-  /* collab team end change */
+  /* collab Team end change */
   font-family: "Outfit", sans-serif;
   font-size: 16px;
   font-weight: 300;
@@ -2643,15 +2643,15 @@ services
 
 /* -------------------------------------------
 
-team
+Team
 
 ------------------------------------------- */
-.mil-team-card {
+.mil-Team-card {
   position: relative;
   overflow: hidden;
   padding-bottom: 130%;
 }
-.mil-team-card:after {
+.mil-Team-card:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -2662,7 +2662,7 @@ team
   -webkit-transition: 0.6s cubic-bezier(0, 0, 0.3642, 1);
   transition: 0.6s cubic-bezier(0, 0, 0.3642, 1);
 }
-.mil-team-card img {
+.mil-Team-card img {
   position: absolute;
   top: 0;
   left: 0;
@@ -2677,17 +2677,17 @@ team
   -webkit-transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
 }
-.mil-team-card.mil-offset-card {
+.mil-Team-card.mil-offset-card {
   -webkit-transform: translateY(60px);
           transform: translateY(60px);
 }
 @media screen and (max-width: 992px) {
-  .mil-team-card.mil-offset-card {
+  .mil-Team-card.mil-offset-card {
     -webkit-transform: none;
             transform: none;
   }
 }
-.mil-team-card .mil-description {
+.mil-Team-card .mil-description {
  z-index: 10;
   opacity: 0;
   text-align: center;
@@ -2714,7 +2714,7 @@ team
   transition: 0.6s cubic-bezier(0, 0, 0.3642, 1);
   /* margin:10px; */
 }
-.mil-team-card .mil-description .mil-secrc-text {
+.mil-Team-card .mil-description .mil-secrc-text {
   opacity: 0;
   -webkit-transform: translateY(15px);
           transform: translateY(15px);
@@ -2723,26 +2723,26 @@ team
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
-.mil-team-card .mil-description .mil-secrc-text a {
+.mil-Team-card .mil-description .mil-secrc-text a {
   color: rgb(255, 255, 255);
   -webkit-transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
   transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
 }
-.mil-team-card .mil-description .mil-secrc-text a:hover {
+.mil-Team-card .mil-description .mil-secrc-text a:hover {
   color: rgb(255, 152, 0);
 }
-.mil-team-card:hover img {
+.mil-Team-card:hover img {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
-.mil-team-card:hover:after {
+.mil-Team-card:hover:after {
   width: 100%;
 }
-.mil-team-card:hover .mil-description {
+.mil-Team-card:hover .mil-description {
   opacity: 1;
   pointer-events: all;
 }
-.mil-team-card:hover .mil-description .mil-secrc-text {
+.mil-Team-card:hover .mil-description .mil-secrc-text {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -2750,10 +2750,10 @@ team
           transition-delay: 0.1s;
 }
 
-.mil-team-list {
+.mil-Team-list {
   position: relative;
 }
-.mil-team-list .mil-lines-place {
+.mil-Team-list .mil-lines-place {
   position: absolute;
   top: -120px;
   left: -22.5%;
