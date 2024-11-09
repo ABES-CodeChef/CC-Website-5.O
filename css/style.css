@@ -4403,7 +4403,7 @@ html.is-animating .mil-menu-frame {
 .card__article {
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 28px 10px rgba(122, 66, 178, 0.575);
+  box-shadow: 0 0 28px 10px #0E1636;
   border-radius: 1.5rem;
 }
 
@@ -4412,18 +4412,19 @@ html.is-animating .mil-menu-frame {
   backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );
   border-radius: 1.5rem; 
-  width: 340px;
-  height: 290px;
+  width: 400px;
+  height: auto;
   object-fit: cover;
   overflow: hidden;
+
 }
+
 .card__data {
   width: 80%;
   max-width: 80%;
-  background: rgba(84, 36, 132, 0.527);
+  background: #182142;
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 8px );
-  -webkit-backdrop-filter: blur( 7.5px );
+  -webkit-backdrop-filter: blur( 6px );
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
   padding: 1.5rem 2rem;
@@ -4469,6 +4470,24 @@ html.is-animating .mil-menu-frame {
 
 .card__button:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .card__container {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .card__article {
+    width: 100%; 
+    max-width: 400px; 
+    margin-bottom: 20px;
+  }
+
+  .card__img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .text-overlay {
