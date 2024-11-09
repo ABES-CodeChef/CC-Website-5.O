@@ -22,10 +22,12 @@ body {
 }
 
 .Rescards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
     gap: 50px;
     margin-top: 20px;
+
+    
 }
 
 .Rescard {
@@ -39,7 +41,7 @@ body {
     height:300px;
     width: 300px;
     cursor: pointer;
-
+    
 }
 
 .Rescard h3 {
@@ -50,6 +52,9 @@ body {
 .Rescard p {
     font-size: 1rem;
     line-height: 1.5;
+}
+.Rescard ol{
+    margin-left:25px ;
 }
 
 .Rescard.flip .Rescard-front {
@@ -74,15 +79,15 @@ body {
     padding: 20px;
 }
 
-.Rescard-front {
+/* .Rescard-front {
     background-color: #f9f9f9;
-}
+} */
 
-.Rescard-back {
+/* .Rescard-back {
     background-color: #4CAF50;
     color: white;
     transform: rotateY(180deg);
-}
+} */
 .Rescard ul {
     padding-left: 20px;
 }
@@ -191,8 +196,13 @@ body {
 
 .Rescards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ensure cards adjust based on available space */
     gap: 20px;
+    display: flex;
+    justify-content: center; /* Center the cards horizontally */
+    align-items: center; /* Vertically align the cards */
+    gap: 20px; /* Add spacing between the cards */
+    flex-wrap: wrap
 }
 
 .Rescard {
@@ -244,6 +254,7 @@ body {
 .Rescard h3 {
     margin-bottom: 10px;
     font-size: 1.5rem;
+   text-align: center;
 }
 
 .Rescard ul {
@@ -282,7 +293,6 @@ body {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 1.5s;
-    
     perspective: 1000px;
     cursor: pointer;
 }
@@ -317,7 +327,7 @@ body {
 }
 
 .Rescard-back {
-    background-color: #f4f4f4;
+    background-color: #ff9800;
     color: #333;
     transform: rotateY(180deg); 
 }
@@ -330,5 +340,11 @@ body {
 #career{
     padding-bottom: 50px;
 }
+.Rescard h3 {
+    min-height: 60px; 
+    margin-bottom: 10px;
+    text-align: center; 
+}
 
-  
+
+
