@@ -1368,7 +1368,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     color: rgb(255, 255, 255);
   }
   .mil-frame .mil-frame-top .mil-menu-btn span, .mil-frame .mil-frame-top .mil-menu-btn span:after, .mil-frame .mil-frame-top .mil-menu-btn span:before {
-    background: rgb(255, 255, 255);
+    background: linear-gradient(to right, #6a3093, #a044ff);
           /* backdrop-filter: invert(100%); */
   }
 }
@@ -1540,7 +1540,7 @@ menu
   color: rgb(255, 255, 255);
 }
 .mil-menu-frame .mil-frame-top .mil-menu-btn span, .mil-menu-frame .mil-frame-top .mil-menu-btn span:after, .mil-menu-frame .mil-frame-top .mil-menu-btn span:before {
-  background-color: rgb(255, 255, 255);
+  background: linear-gradient(to right, #6a3093, #a044ff);
 }
 .mil-menu-frame .mil-main-menu {
   -webkit-transform: translateX(-30px);
