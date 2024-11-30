@@ -45,8 +45,8 @@
         }
 
         .mil-Team-card{
-            border-radius: 15px;
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); 
+            border-radius: 20px;
+            box-shadow: 5px 5px 10px rgb(154, 144, 144);
             text-align: center;
             
         }
@@ -395,7 +395,7 @@
                                             <br><br><br>
                                             <p class="tagline">Kuchh Unique krte hai</p>
                                             <ul class="mil-social-icons mil-center">
-                                                <li><a href="https:/www.linkedin.com/in/abhijha301" target="_blank" class="social-icon"> <i class="fab fa-linkedin"></i></a></li>
+                                                <li><a href="https://www.linkedin.com/in/abhijha301/" target="_blank" class="social-icon"> <i class="fab fa-linkedin"></i></a></li>
                                             </ul>
                                             
                                         </div>
@@ -421,7 +421,7 @@
                                             <br><br><br>
                                             <p class="tagline">Kuchh Unique krte hai</p>
                                             <ul class="mil-social-icons mil-center">
-                                                <li><a href="https:/www.linkedin.com/in/abhijha301" target="_blank" class="social-icon"> <i class="fab fa-linkedin"></i></a></li>
+                                                <li><a href="https://www.linkedin.com/in/abhijha301/" target="_blank" class="social-icon"> <i class="fab fa-linkedin"></i></a></li>
                                             </ul>
                                             
                                         </div>
@@ -1111,6 +1111,50 @@
     <script src="js/plugins/ScrollTo.min.js"></script>
     <!-- ashley js -->
     <script src="js/main.js"></script>
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+  const cards = document.querySelectorAll('.mil-Team-card');
+
+  function isInView(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 && rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function toggleDescriptionVisibility() {
+    // Check for mobile view by detecting screen width
+    const isMobile = window.innerWidth <= 992;
+    
+    cards.forEach(card => {
+      const description = card.querySelector('.mil-description');
+      if (isMobile) {
+        // On mobile: Show description when in view
+        if (isInView(card)) {
+          description.classList.add('show');
+        } else {
+          description.classList.remove('show');
+        }
+      } else {
+        // On desktop: Do not auto-show, hover will control visibility
+        description.classList.remove('show');
+      }
+    });
+  }
+
+  // Add scroll event listener
+  window.addEventListener('scroll', toggleDescriptionVisibility);
+  
+  // Initial check on page load
+  toggleDescriptionVisibility();
+  
+  // Recheck on window resize to update mobile vs desktop behavior
+  window.addEventListener('resize', toggleDescriptionVisibility);
+});
+
+    </script>
 
 </body>
 

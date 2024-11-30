@@ -1096,4 +1096,5 @@ function changeSlide() {
   currentIndex = (currentIndex + 1) % radioButtons.length; // Loop through all radio buttons
 }
 
-setInterval(changeSlide, 5000); // Change slides every 3 seconds
+setInterval(changeSlide, 2000); // Change slides every 3 seconds
+

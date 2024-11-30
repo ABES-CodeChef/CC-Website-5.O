@@ -607,7 +607,12 @@
 
                 </div>
                 
+
+
+        
+
         <!-- image carousel  -->
+         
 
 
                 <!-- call to action -->
@@ -900,6 +905,47 @@
     <script src="js/plugins/ScrollTo.min.js"></script>
     <!-- ashley js -->
     <script src="js/main.js"></script>
+    <script>
+    // Function to check if an element is in the viewport
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+}
+
+// Function to trigger animation on scroll (only on mobile)
+function triggerAnimationsOnScroll() {
+  // Only trigger on mobile (screen width 768px or less)
+  if (window.innerWidth <= 768) {
+    const cards = document.querySelectorAll('.hm-card-wrapper-container');
+
+    cards.forEach(card => {
+      const cardItem = card.querySelector('.hm-card-item');
+      const cardWrapper = card.querySelector('.hm-card-wrapper');
+      const cardTitle = card.querySelector('.hm-card-title');
+      const cardCharacter = card.querySelector('.hm-card-character');
+
+      if (isElementInViewport(card)) {
+        // Add active class to trigger animation
+        cardWrapper.classList.add('active');
+        cardTitle.classList.add('active');
+        cardCharacter.classList.add('active');
+      } else {
+        // Remove active class to reset animation
+        cardWrapper.classList.remove('active');
+        cardTitle.classList.remove('active');
+        cardCharacter.classList.remove('active');
+      }
+    });
+  }
+}
+
+// Listen for scroll events
+window.addEventListener('scroll', triggerAnimationsOnScroll);
+
+// Trigger on page load in case some cards are already in view
+document.addEventListener('DOMContentLoaded', triggerAnimationsOnScroll);
+
+    </script>    
 
 </body>
 

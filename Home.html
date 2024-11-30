@@ -20,6 +20,7 @@
     <title>CodeChef ABESEC Chapter</title>
     <link rel="icon" type="image/x-icon" href="img/logos/CodeChef ABESEC.webp">
 
+ 
 </head>
 
 <body>
@@ -40,7 +41,7 @@
         <!-- cursor end -->
 
         <!-- preloader -->
-        <div class="mil-preloader">
+        <!-- <div class="mil-preloader">
             <div class="mil-preloader-animation">
                 <div class="mil-pos-abs mil-animation-1">
                     <p class="mil-h3 mil-muted mil-thin">Collaboration</p>
@@ -54,7 +55,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- preloader end -->
 
         <!-- scrollbar progress -->
@@ -265,20 +266,26 @@
                                             
                                         </article> -->
            
-                                        <article class="card__article">
+                                        <article class="card__article" id="card1">
                                             <img src="img/photo/coc-refined.webp" alt="image" class="card__img">
                                             <div class="text-overlay"></div>
-                                            <!-- <a href="https://bit.ly/coc_3O"> -->
+                                            
                                             <div class="card__data">
-                                                <h2 class="card__title">We are back brewing new magical spells🪄</h2>
-                                                <span class="card__description">Go and Checkout our latest event COC 3.0!!</span>
-                                                <a href="#" class="card__button" onclick="redirectToEvent('https://bit.ly/coc_3O')">Register Now!</a>
+                                                <h2 class="card__title">Your opinion matters!</h2>
+                                                <span class="card__description">Please share your feedback on COC 3.0. 📑🔧</span>
+                                                <a href="#" class="card__button" onclick="redirectToEvent('https://forms.office.com/pages/responsepage.aspx?id=Dn_YOpMfvUGU9ILDfZcciOfXwehu82FBhcMBdn0xhq5UOTEwTDU5UloxNTE2V0M1MTRONjgwM09NTy4u&route=shorturl')">Give_Feedback!</a>
                                             </div>
-                                            </a>
                                         </article>
+                                        
+                                        
+                                        
+                                        
+                                          
+                                        
                                     </div>
                                     <!-- Event Card List END   -->
-                                
+                                   
+                                      
                             </div>
                         </div>
                     </div> 
@@ -506,6 +513,50 @@
                         </div>
                     </div>
                 </section>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+              const cards = document.querySelectorAll('.mil-Team-card');
+            
+              function isInView(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                  rect.top >= 0 && rect.left >= 0 &&
+                  rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                  rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+              }
+            
+              function toggleDescriptionVisibility() {
+                // Check for mobile view by detecting screen width
+                const isMobile = window.innerWidth <= 992;
+                
+                cards.forEach(card => {
+                  const description = card.querySelector('.mil-description');
+                  if (isMobile) {
+                    // On mobile: Show description when in view
+                    if (isInView(card)) {
+                      description.classList.add('show');
+                    } else {
+                      description.classList.remove('show');
+                    }
+                  } else {
+                    // On desktop: Do not auto-show, hover will control visibility
+                    description.classList.remove('show');
+                  }
+                });
+              }
+            
+              // Add scroll event listener
+              window.addEventListener('scroll', toggleDescriptionVisibility);
+              
+              // Initial check on page load
+              toggleDescriptionVisibility();
+              
+              // Recheck on window resize to update mobile vs desktop behavior
+              window.addEventListener('resize', toggleDescriptionVisibility);
+            });
+            
+                </script>
                 <!-- Team end -->
 
 
@@ -950,7 +1001,24 @@
     <!-- ashley js -->
     <script src="js/main.js"></script>
     <script src="js/script.js"></script>
+<script>
+    window.addEventListener("scroll", () => {
+  const cards = document.querySelectorAll('.card__article');
 
+  cards.forEach(card => {
+    const cardData = card.querySelector('.card__data');
+    const cardRect = card.getBoundingClientRect();
+
+    // If the card is in the viewport, show the description
+    if (cardRect.top < window.innerHeight && cardRect.bottom >= 0) {
+      cardData.classList.add('visible');
+    } else {
+      cardData.classList.remove('visible');
+    }
+  });
+});
+
+</script>
 </body>
 
 </html>
