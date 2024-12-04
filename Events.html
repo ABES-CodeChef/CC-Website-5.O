@@ -1038,7 +1038,16 @@
           el: '#app'
         });
       </script> -->
-
+      <script>
+        
+        if (!localStorage.getItem('reloaded')) {
+            
+            setTimeout(() => {
+                localStorage.setItem('reloaded', 'true'); 
+                location.reload();
+            }, 100); 
+        }
+      </script>
       <script>
         Vue.config.devtools = true;
     
