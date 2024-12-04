@@ -97,9 +97,9 @@ body {
 }
 @media screen and (max-width: 768px) {
   html,
-body {
+  body {
     font-size: 15px;
-  }
+}
 }
 
 *::-moz-selection {
@@ -2664,6 +2664,8 @@ Team
   position: relative;
   overflow: hidden;
   padding-bottom: 130%;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgb(154, 144, 144);
 }
 .mil-Team-card:after {
   content: "";
@@ -2675,6 +2677,7 @@ Team
   background-color: rgb(255, 152, 0);
   -webkit-transition: 0.6s cubic-bezier(0, 0, 0.3642, 1);
   transition: 0.6s cubic-bezier(0, 0, 0.3642, 1);
+  
 }
 .mil-Team-card img {
   position: absolute;
@@ -2700,7 +2703,10 @@ Team
     -webkit-transform: none;
             transform: none;
   }
+  
 }
+
+
 .mil-Team-card .mil-description {
  z-index: 10;
   opacity: 0;
@@ -2772,6 +2778,60 @@ Team
   top: -120px;
   left: -22.5%;
 }
+/* Default behavior for description */
+.mil-Team-card .mil-description {
+  z-index: 10;
+  opacity: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  pointer-events: none;
+  transition: opacity 0.6s cubic-bezier(0, 0, 0.3642, 1);
+}
+
+/* When the description is visible (on mobile or hover on desktop) */
+.mil-Team-card .mil-description.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mil-Team-card .mil-description .mil-secrc-text {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.4s cubic-bezier(0, 0, 0.3642, 1), transform 0.4s cubic-bezier(0, 0, 0.3642, 1);
+}
+
+/* For when the description is fully visible */
+.mil-Team-card .mil-description.show .mil-secrc-text {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+/* Hover effect for desktop (only on screens larger than 992px) */
+@media (min-width: 992px) {
+  .mil-Team-card:hover .mil-description {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .mil-Team-card:hover .mil-description .mil-secrc-text {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.1s;
+  }
+}
+
+
+
 
 /* -------------------------------------------
 
@@ -4938,6 +4998,28 @@ input[type="radio"] {
 }
 
 
+
+.hm-card-wrapper.active {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  opacity: 1; /* Visible when activated */
+}
+
+
+
+.hm-card-title.active {
+  transform: translate3d(0%, -50px, 100px);
+  opacity: 1; /* Visible when activated */
+}
+
+
+.hm-card-character.active {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
+
+
+
 #footer_text{
   font-size:36px;
   font-weight: bold;
@@ -4953,4 +5035,141 @@ input[type="radio"] {
 
 input::placeholder, textarea::placeholder {
   font-size: 18px; /* Adjust the size as needed */
+}
+
+/* Footer Container */
+footer.mil-dark-bg {
+  background-color: #1c1c1c;
+  color: #fff;
+  padding: 40px 0;
+}
+
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer .row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer .footer-logo, .footer-menu, .footer-contact {
+  padding: 15px;
+}
+
+footer .footer-logo h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+footer .footer-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .footer-menu ul li {
+  margin: 10px 0;
+}
+
+footer .footer-menu ul li a {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer .footer-menu ul li a:hover {
+  color: #ff9800;
+}
+
+footer .footer-contact p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+footer .social-icons {
+  display: flex;
+  gap: 20px;
+  padding-left: 0;
+}
+
+footer .social-icons li {
+  list-style: none;
+}
+
+footer .social-icons li a {
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+footer .social-icons li a:hover {
+  color: #ff9800;
+}
+
+footer .mil-button {
+  background-color: #ff9800;
+  color: #fff;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+footer .mil-button:hover {
+  background-color: #e68900;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  footer .row {
+      flex-direction: column;
+      align-items: center;
+  }
+  footer .footer-logo, footer .footer-menu, footer .footer-contact {
+      text-align: center;
+  }
+  footer .footer-contact p {
+      font-size: 12px;
+  }
+}
+
+/* Footer Animation for Modern Look */
+footer .social-icons li a {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+footer .social-icons li a:hover {
+  transform: translateY(-5px);
+  opacity: 0.8;
+}
+
+/* Add subtle background animation */
+footer .mil-animation {
+  position: absolute;
+  z-index: -1;
+  background-color: rgba(255, 152, 0, 0.1);
+  border-radius: 50%;
+  animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 0.3; }
+}
+
+
+@media (max-width: 768px) {
+  .card__data.visible {
+    opacity: 1;
+    bottom: 0;
+  }
 }
