@@ -1049,22 +1049,9 @@
           }
         });
 
-        // Initialize Vue
-        function initVue() {
-          new Vue({
-            el: '#app'
-          });
-        }
-
-        // Initialize Swup
-        const swup = new Swup();
-        swup.on('contentReplaced', () => {
-          initVue(); // Reinitialize Vue after Swup updates the DOM
+        new Vue({
+          el: '#app'
         });
-
-        // Initial Vue Load
-        initVue();
-
 
       </script>
 
