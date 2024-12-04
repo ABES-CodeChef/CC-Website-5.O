@@ -1038,7 +1038,7 @@
           el: '#app'
         });
       </script> -->
-      <script>
+      <!-- <script>
         
         if (!localStorage.getItem('reloaded')) {
             
@@ -1047,10 +1047,10 @@
                 location.reload();
             }, 1000); 
         }
-      </script>
+      </script> -->
       <script>
         Vue.config.devtools = true;
-    
+
         Vue.component('cardnew', {
           template: `
             <div class="cardnew-wrap"
@@ -1066,10 +1066,6 @@
                 </div>
               </div>
             </div>`,
-          mounted() {
-            this.width = this.$refs.cardnew.offsetWidth;
-            this.height = this.$refs.cardnew.offsetHeight;
-          },
           props: ['dataImage'],
           data() {
             return {
@@ -1108,6 +1104,10 @@
             }
           },
           methods: {
+            calculateCardDimensions() {
+              this.width = this.$refs.cardnew.offsetWidth || 0;
+              this.height = this.$refs.cardnew.offsetHeight || 0;
+            },
             handleMouseMove(e) {
               const rect = this.$refs.cardnew.getBoundingClientRect();
               this.mouseX = e.clientX - rect.left - this.width / 2;
@@ -1122,12 +1122,20 @@
                 this.mouseY = 0;
               }, 1000);
             }
+          },
+          mounted() {
+            this.calculateCardDimensions();
+            window.addEventListener('resize', this.calculateCardDimensions);
+          },
+          beforeDestroy() {
+            window.removeEventListener('resize', this.calculateCardDimensions);
           }
         });
-    
+
         new Vue({
           el: '#app'
         });
+
       </script>
 
 
