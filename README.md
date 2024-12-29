@@ -1,6 +1,6 @@
 # CodeChef ABESEC Website
 
-The official CodeChef ABESec club website is designed to showcase the events, activities, and achievements of our club. It features a clean and responsive design built with HTML, CSS, and JavaScript.
+The official CodeChef ABESec club website is designed to showcase the events, activities, and achievements of our club. It features a clean and responsive design built with HTML, CSS, JavaScript and GSAP (GreenSock Animation Platform).
 
 ## 🚀 Deployed Project
 You can explore the website directly by clicking the link below:
@@ -20,9 +20,8 @@ You can explore the website directly by clicking the link below:
 - **Event Listings**: Displays upcoming events and activities.
 - **Team Page**: Introduces the members of the CodeChef ABESec club.
 - **Dynamic Blog**: A space to showcase coding tutorials and other technical articles (*planned*).
--**more things are in process** : some more cool thing will be added soon
   
-## installation 
+## Installation 
 
 Follow these instructions to set up and run the project locally on your machine.
 
@@ -97,13 +96,7 @@ We welcome contributions from everyone! Whether you're fixing bugs, adding new f
 - Ensure your code works and passes any existing tests.
 
 ---
-## TODO LIST
 
-- [ ] Finalize the Home page design
-- [ ] Ensure mobile responsiveness for all pages
-- [ ] Add About Us section
-- [ ] Implement Blog section for club update
-- [ ] final review by mentors
 ### License
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
