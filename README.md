@@ -1,103 +1,90 @@
-# CodeChef ABESEC Website
+# CodeChef ABESEC Chapter Website
 
-The official CodeChef ABESec club website is designed to showcase the events, activities, and achievements of our club. It features a clean and responsive design built with HTML, CSS, JavaScript and GSAP (GreenSock Animation Platform).
+Welcome to the official CodeChef ABESEC repository..
 
-## 🚀 Deployed Project
-You can explore the website directly by clicking the link below:
+## 🚀 Deployed Website
+Access the live website here:
 
-🔗 [CodeChef ABESec Club Website](https://codechefabesec.netlify.app/Home)
-
+🔗 [CodeChef ABESEC Chapter Website](https://codechefabesec.netlify.app/Home)
 
 ## Table of Contents
-- [Project Features](#project-features)
+- [About](#about)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
 - [Installation](#installation)
 - [Contributing](#contributing)
-- [TODOs](#todo-list)
 - [License](#license)
 
-## Project Features
+## About 
+This repository showcases the events, activities, and achievements of CodeChef ABESEC Chapter with a clean, responsive design. Built using HTML, CSS, JavaScript, and GSAP, the project aims to provide an interactive, user-friendly experience for users. Explore our events, view achievements, and stay updated on the latest activities!
+
+## Features
 - **Responsive Design**: Optimized for all devices (mobile, tablet, desktop).
 - **Event Listings**: Displays upcoming events and activities.
-- **Team Page**: Introduces the members of the CodeChef ABESec club.
-- **Dynamic Blog**: A space to showcase coding tutorials and other technical articles (*planned*).
-  
-## Installation 
+- **Team Page**: Introduces the members of the CodeChef ABESEC Chapter.
+- **Dynamic Blog**: Planned space for coding tutorials and technical articles.
+- **Project Page**: Highlights completed and upcoming projects, showcasing the Chapter's technical contributions.
 
-Follow these instructions to set up and run the project locally on your machine.
+## Tech Stack
+- **HTML**: For structuring the web pages.
+- **CSS**: For styling and creating an engaging UI.
+- **SCSS (Sass)**: For maintainable and scalable stylesheets.
+- **JavaScript**: For dynamic interactions and functionality.
+- **GSAP**: For high-performance animations.
+
+## Installation 
+Follow these steps to set up the project locally:
 
 ### Prerequisites
-
-Make sure you have the following installed on your system:
-
 - **Git**: To clone the repository. [Download Git](https://git-scm.com/downloads)
-- **Web Browser**: Any modern web browser (e.g., Chrome,brave, Firefox, Edge)
-- **Text Editor/IDE**:  Visual Studio Code, Sublime Text, etc.
+- **Code Editor/IDE** (Optional): Recommended for editing the codebase, such as Visual Studio Code or Sublime Text.
 
-### ⚙️ Steps to Run Locally
-
-#### 1. Clone the repository
-
-Open a terminal and run the following command to clone the repository:
-
-git clone https://github.com/your-username/your-repository.git
-
-#### 2. Now simpiely run the code with live server ..
-
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ABES-CodeChef/CC-Website-5.O.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd CC-Website-5.O
+   ```
+3. Open `index.html` in your browser to view the website.
 
 ## Contributing
+Contributions are welcome! Whether fixing bugs, adding features, or improving documentation, your support matters.
 
-We welcome contributions from everyone! Whether you're fixing bugs, adding new features, or improving documentation, your help is appreciated.
-
-### *How to Contribute*
-
-1. *Fork the Repository*  
-   Start by forking the project repository to your GitHub account.
-
-2. *Clone Your Fork*  
-   Clone your forked repository to your local machine:
-   bash
+### Steps to Contribute
+1. **Fork the Repository**: Fork the project to your GitHub account.
+2. **Clone Your Fork**: Clone the repository locally:
+   ```bash
    git clone https://github.com/yourusername/CC-Website-5.O.git
-   
+   ```
+3. **Create a New Branch**: Create a branch for your changes:
+   ```bash
+   git checkout -b your-branch-name
+   ```
+4. **Implement Changes**: Make your updates, ensuring they follow the project's standards.
+5. **Commit Changes**: Write clear commit messages:
+   ```bash
+   git commit -m "type: description of your changes"
+   ```
+6. **Push Branch**: Push your branch to your forked repository:
+   ```bash
+   git push origin your-branch-name
+   ```
+7. **Open a Pull Request**: Submit a PR to the main repository, detailing your changes and referencing related issues.
 
-3. *Create a New Branch*  
-   Create a new branch for your feature or bugfix:
-   bash
-   git checkout -b feature/my-new-feature
-   
+### Commit Message Types
+- **feat**: A new feature.
+- **fix**: A bug fix.
+- **docs**: Documentation changes.
+- **refactor**: Code changes that neither add features nor fix bugs.
 
-4. *Make Your Changes*  
-   Implement your changes in the codebase. Ensure you follow coding standards and add clear, concise code.
+### Tips for Pull Requests
+- Focus on one change per PR.
+- Describe the issue solved.
+- Reference related issues.
+- Ensure code passes tests.
 
-5. *Commit Your Changes*  
-   Commit your changes with a descriptive commit message following the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) format:
-   bash
-   git commit -m "feat: add new blog section"
-   
-
-6. *Push Your Branch*  
-   Push your changes to your forked repository:
-   bash
-   git push origin feature/my-new-feature
-   
-
-7. *Open a Pull Request*  
-   Submit a pull request (PR) to the main branch of the original repository. Clearly describe your changes in the PR description and reference any related issues.
-
-### *Commit Message Guidelines*
-- *feat*: A new feature
-- *fix*: A bug fix
-- *docs*: Documentation changes
-- *refactor*: Code refactoring without adding features or fixing bugs
-
-### *Tips for Writing Good Pull Requests*
-- Keep your PR focused on one change.
-- Describe the problem your PR solves.
-- Reference any related issues in your PR description.
-- Ensure your code works and passes any existing tests.
-
----
-
-### License
-
+## License
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
-      
