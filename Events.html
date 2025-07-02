@@ -155,7 +155,7 @@
     .cardnew-wrap {
       width: 100%;
       max-width: 1200px;
-      margin: 20px auto;
+      margin: 10px auto;
       perspective: 1000px;
     }
 
@@ -163,7 +163,7 @@
       background: white;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); */
       transition: all 0.3s ease;
     }
 
@@ -181,14 +181,22 @@
       flex: 0 0 40%;
       position: relative;
       overflow: hidden;
+      aspect-ratio: 1 / 1;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .cardnew-bg {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      aspect-ratio: 1 / 1;
+      display: block;
       transition: transform 0.5s ease;
     }
+
 
     .cardnew:hover .cardnew-bg {
       transform: scale(1.05);
@@ -215,13 +223,11 @@
     }
 
     .cardnew-title {
-      margin-bottom: 15px;
       font-size: larger;
     }
 
     .cardnew-title h3 {
       font-size: 3rem;
-      margin-bottom: 10px;
       color: #222;
       font-weight: 600;
       line-height: 1.3;
@@ -301,7 +307,7 @@
       }
     }
   </style>
-  
+
   <!-- <style>
     .container {
       display: flex;
@@ -647,122 +653,126 @@
 
         <!-- portfolio -->
         <!-- This is the updated portfolio section HTML -->
-        <section id="portfolio">
+        <!-- <section id="portfolio">
           <div class="mil-portfolio mil-p-120-60">
             <div class="mil-lines-place"></div>
             <div class="mil-lines-place mil-lines-long"></div>
-            <div id="app">
-              <!-- Our Events Text-->
-              <div class="container">
-                <h2 class="mil-up mil-mb-60">Our Events</h2>
-                <!-- Event Card Grid -->
-                <div>
-                  <div v-for="(card, index) in cards" :key="index" class="mil-up position-sticky top-0 vh-100">
-                    <a :href="card.url" class="card-link">
-                      <cardnew :data-image="card.image" :title="card.title" :description="card.description"
-                        :date="card.date">
-                      </cardnew>
-                    </a>
-                  </div>
-                </div>
-                <!-- Event Card Grid End -->
-              </div>
-            </div>
+
           </div>
-        </section>
+        </section> -->
         <!-- portfolio end -->
+        <!-- hidden elements end -->
 
-        <!-- call to action -->
-        <section class="mil-soft-bg">
-          <div class="container mil-p-120-120">
-            <div class="row">
+      </div>
+    </div>
+    <!-- content -->
+  </div>
+  <div id="app" class="" style="background-color: rgb(248, 248, 248);">
+    <!-- Our Events Text-->
+    <div class="container mil-portfolio mil-p-120-60">
+      <div class="mil-lines-place"></div>
+      <div class="mil-lines-place mil-lines-long"></div>
+      <h2 class="mil-mb-60">Our Events</h2>
+      <!-- Event Card Grid -->
+      <div>
+        <div v-for="(card, index) in cards" :key="index" class="position-sticky vh-100" style="top: 18vh;">
+          <a :href="card.url" class="card-link">
+            <cardnew :data-image="card.image" :title="card.title" :description="card.description" :date="card.date" :highlights="card.highlights">
+            </cardnew>
+          </a>
+        </div>
+      </div>
+      <!-- Event Card Grid End -->
+    </div>
+  </div>
+  <!-- call to action -->
+  <section class="mil-soft-bg">
+    <div class="container mil-p-120-120">
+      <div class="row">
 
-            </div>
-            <div class="mil-center">
-              <h2 class="mil-up mil-mb-60">Got queries? Drop your email and get in touch with us!</h2>
-              <div class="row justify-content-center mil-up">
-                <div class="mil-center">
+      </div>
+      <div class="mil-center">
+        <h2 class="mil-up mil-mb-60">Got queries? Drop your email and get in touch with us!</h2>
+        <div class="row justify-content-center mil-up">
+          <div class="mil-center">
 
 
-                  <div class="mil-up"><a href="contact.html" class="mil-button mil-arrow-place mil-mb-60"
-                      id="know-more"><span>Contact us</span></a></div>
+            <div class="mil-up"><a href="contact.html" class="mil-button mil-arrow-place mil-mb-60"
+                id="know-more"><span>Contact us</span></a></div>
 
-                </div>
-              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- call to action end -->
+
+  <footer class="mil-dark-bg">
+    <div class="mi-invert-fix">
+      <div class="mil-animation-frame">
+        <div class="mil-animation mil-position-1 mil-scale" data-value-1="2.4" data-value-2="1.4"
+          style="top: 300px; right: -100px"></div>
+        <div class="mil-animation mil-position-2 mil-scale" data-value-1="2" data-value-2="1" style="left: 150px">
+        </div>
+      </div>
+      <div class="container mil-p-120-60">
+        <div class="row justify-content-between">
+          <div class="col-md-4 col-lg-4 mil-mb-60">
+            <div class="mil-muted mil-thin" id="footer_text">CodeChef ABESEC Chapter</div>
+            <div class="mil-up"><a href="contact.html" class="mil-button mil-arrow-place mil-mb-60"
+                id="know-more"><span>Contact us</span></a></div>
+            <div>
+              <p class="mil-light-soft mil-up" style="text-align: center;">
+                © 2024 CodeChef ABESEC. All rights reserved.
+              </p>
             </div>
           </div>
-        </section>
-        <!-- call to action end -->
-
-        <footer class="mil-dark-bg">
-          <div class="mi-invert-fix">
-            <div class="mil-animation-frame">
-              <div class="mil-animation mil-position-1 mil-scale" data-value-1="2.4" data-value-2="1.4"
-                style="top: 300px; right: -100px"></div>
-              <div class="mil-animation mil-position-2 mil-scale" data-value-1="2" data-value-2="1" style="left: 150px">
+          <div class="col-md-7 col-lg-6">
+            <div class="row justify-content-end">
+              <div class="col-md-6 col-lg-7" style="margin-top: 30px;">
+                <nav class="mil-footer-menu mil-mb-60" style="align-content: center;">
+                  <ul>
+                    <li class="mil-up mil-active"><a href="Home.html">Home</a></li>
+                    <li class="mil-up"><a href="Events.html">Events</a></li>
+                    <li class="mil-up"><a href="Team.html">Team
+                      </a></li>
+                    <li class="mil-up"><a href="Achievements.html">Achievements</a></li>
+                  </ul>
+                </nav>
               </div>
-            </div>
-            <div class="container mil-p-120-60">
-              <div class="row justify-content-between">
-                <div class="col-md-4 col-lg-4 mil-mb-60">
-                  <div class="mil-muted mil-thin" id="footer_text">CodeChef ABESEC Chapter</div>
-                  <div class="mil-up"><a href="contact.html" class="mil-button mil-arrow-place mil-mb-60"
-                      id="know-more"><span>Contact us</span></a></div>
-                  <div>
-                    <p class="mil-light-soft mil-up" style="text-align: center;">
-                      © 2024 CodeChef ABESEC. All rights reserved.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-md-7 col-lg-6">
-                  <div class="row justify-content-end">
-                    <div class="col-md-6 col-lg-7" style="margin-top: 30px;">
-                      <nav class="mil-footer-menu mil-mb-60" style="align-content: center;">
-                        <ul>
-                          <li class="mil-up mil-active"><a href="Home.html">Home</a></li>
-                          <li class="mil-up"><a href="Events.html">Events</a></li>
-                          <li class="mil-up"><a href="Team.html">Team
-                            </a></li>
-                          <li class="mil-up"><a href="Achievements.html">Achievements</a></li>
-                        </ul>
-                      </nav>
-                    </div>
-                    <div class="col-md-6 col-lg-5">
-                      <div class="mil-mb-60">
-                        <!-- <div
+              <div class="col-md-6 col-lg-5">
+                <div class="mil-mb-60">
+                  <!-- <div
                                                   class="mil-muted mil-thin"
                                                   style="font-size: 18px; font-weight: bold;">Contact
                                                   Us</div> -->
-                        <p class="mil-light-soft mil-up" style="margin-bottom: 0;">
-                          19th KM Stone, NH-09,
-                          Ghaziabad - 201009,
-                          Uttar Pradesh, India
-                          <span class="mil-no-wrap">+91
-                            1207 135 112</span>
-                        </p>
-                        <ul class="mil-social-icons mil-up"
-                          style="display: flex; gap: 15px; padding-left: 0; margin-top: 20px;">
-                          <li><a href="mailto:codechef@abes.ac.in" target="_blank" rel="noopener noreferrer"
-                              class="social-icon">
-                              <i class="far fa-envelope"
-                                style="font-size: 24px; transition: transform 0.3s ease;"></i></a>
-                          </li>
-                          <li><a href="https://www.instagram.com/abesec.codechef/" target="_blank"
-                              rel="noopener noreferrer" class="social-icon">
-                              <i class="fab fa-instagram"
-                                style="font-size: 24px; transition: transform 0.3s ease;"></i></a>
-                          </li>
-                          <li><a href="https://www.linkedin.com/company/codechef-abesec-chapter/" target="_blank"
-                              rel="noopener noreferrer" class="social-icon">
-                              <i class="fab fa-linkedin"
-                                style="font-size: 24px; transition: transform 0.3s ease;"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Map Section -->
-                  <!-- <div class="container"
+                  <p class="mil-light-soft mil-up" style="margin-bottom: 0;">
+                    19th KM Stone, NH-09,
+                    Ghaziabad - 201009,
+                    Uttar Pradesh, India
+                    <span class="mil-no-wrap">+91
+                      1207 135 112</span>
+                  </p>
+                  <ul class="mil-social-icons mil-up"
+                    style="display: flex; gap: 15px; padding-left: 0; margin-top: 20px;">
+                    <li><a href="mailto:codechef@abes.ac.in" target="_blank" rel="noopener noreferrer"
+                        class="social-icon">
+                        <i class="far fa-envelope" style="font-size: 24px; transition: transform 0.3s ease;"></i></a>
+                    </li>
+                    <li class="instagram"><a href="https://www.instagram.com/abesec.codechef/" target="_blank" rel="noopener noreferrer"
+                        class="social-icon">
+                        <i class="fab fa-instagram" style="font-size: 24px; transition: transform 0.3s ease;"></i></a>
+                    </li>
+                    <li class="linkedin"><a href="https://www.linkedin.com/company/codechef-abesec-chapter/" target="_blank"
+                        rel="noopener noreferrer" class="social-icon">
+                        <i class="fab fa-linkedin" style="font-size: 24px; transition: transform 0.3s ease;"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Map Section -->
+            <!-- <div class="container"
                                       style="margin-top: 0%;">
                                       <iframe
                                           src="https://maps.google.com/maps?q=ABES+Engineering+College&t=&z=13&ie=UTF8&iwloc=&output=embed"
@@ -772,7 +782,7 @@
                                           allowfullscreen></iframe>
                                   </div>
                               </div> -->
-                  <!-- <div class="col-md-4 col-lg-6 mil-mb-60">
+            <!-- <div class="col-md-4 col-lg-6 mil-mb-60">
                                   <div class="mil-vert-between">
                                       <div class="mil-mb-30"
                                           style="display: flex; align-items: center; justify-content: flex-start;">
@@ -784,130 +794,122 @@
                                       </div>
                                   </div>
                               </div> -->
-                </div>
-              </div>
-            </div>
-        </footer>
-
-        <!-- hidden elements -->
-        <div class="mil-hidden-elements">
-          <div class="mil-dodecahedron">
-            <div class="mil-pentagon">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div class="mil-pentagon">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div class="mil-pentagon">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div class="mil-pentagon">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div class="mil-pentagon">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div class="mil-pentagon">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div class="mil-pentagon">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div class="mil-pentagon">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div class="mil-pentagon">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div class="mil-pentagon">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div class="mil-pentagon">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div class="mil-pentagon">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
           </div>
+        </div>
+      </div>
+  </footer>
 
-          <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="mil-arrow">
+  <!-- hidden elements -->
+  <div class="mil-hidden-elements">
+    <div class="mil-dodecahedron">
+      <div class="mil-pentagon">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="mil-pentagon">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="mil-pentagon">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="mil-pentagon">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="mil-pentagon">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="mil-pentagon">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="mil-pentagon">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="mil-pentagon">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="mil-pentagon">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="mil-pentagon">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="mil-pentagon">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="mil-pentagon">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="mil-arrow">
                         <path d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z" />
                     </svg> -->
 
-          <svg width="250" viewBox="0 0 300 1404" fill="none" xmlns="http://www.w3.org/2000/svg" class="mil-lines">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M1 892L1 941H299V892C299 809.71 232.29 743 150 743C67.7096 743 1 809.71 1 892ZM0 942H300V892C300 809.157 232.843 742 150 742C67.1573 742 0 809.157 0 892L0 942Z"
-              class="mil-move" />
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M299 146V97L1 97V146C1 228.29 67.7096 295 150 295C232.29 295 299 228.29 299 146ZM300 96L0 96V146C0 228.843 67.1573 296 150 296C232.843 296 300 228.843 300 146V96Z"
-              class="mil-move" />
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M299 1H1V1403H299V1ZM0 0V1404H300V0H0Z" />
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M150 -4.37115e-08L150 1404L149 1404L149 0L150 -4.37115e-08Z" />
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M150 1324C232.29 1324 299 1257.29 299 1175C299 1092.71 232.29 1026 150 1026C67.7096 1026 1 1092.71 1 1175C1 1257.29 67.7096 1324 150 1324ZM150 1325C232.843 1325 300 1257.84 300 1175C300 1092.16 232.843 1025 150 1025C67.1573 1025 0 1092.16 0 1175C0 1257.84 67.1573 1325 150 1325Z"
-              class="mil-move" />
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M300 1175H0V1174H300V1175Z" class="mil-move" />
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M150 678C232.29 678 299 611.29 299 529C299 446.71 232.29 380 150 380C67.7096 380 1 446.71 1 529C1 611.29 67.7096 678 150 678ZM150 679C232.843 679 300 611.843 300 529C300 446.157 232.843 379 150 379C67.1573 379 0 446.157 0 529C0 611.843 67.1573 679 150 679Z"
-              class="mil-move" />
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M299 380H1V678H299V380ZM0 379V679H300V379H0Z"
-              class="mil-move" />
-          </svg>
-        </div>
-        <!-- hidden elements end -->
-
-      </div>
-    </div>
-    <!-- content -->
+    <svg width="250" viewBox="0 0 300 1404" fill="none" xmlns="http://www.w3.org/2000/svg" class="mil-lines">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M1 892L1 941H299V892C299 809.71 232.29 743 150 743C67.7096 743 1 809.71 1 892ZM0 942H300V892C300 809.157 232.843 742 150 742C67.1573 742 0 809.157 0 892L0 942Z"
+        class="mil-move" />
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M299 146V97L1 97V146C1 228.29 67.7096 295 150 295C232.29 295 299 228.29 299 146ZM300 96L0 96V146C0 228.843 67.1573 296 150 296C232.843 296 300 228.843 300 146V96Z"
+        class="mil-move" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M299 1H1V1403H299V1ZM0 0V1404H300V0H0Z" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M150 -4.37115e-08L150 1404L149 1404L149 0L150 -4.37115e-08Z" />
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M150 1324C232.29 1324 299 1257.29 299 1175C299 1092.71 232.29 1026 150 1026C67.7096 1026 1 1092.71 1 1175C1 1257.29 67.7096 1324 150 1324ZM150 1325C232.843 1325 300 1257.84 300 1175C300 1092.16 232.843 1025 150 1025C67.1573 1025 0 1092.16 0 1175C0 1257.84 67.1573 1325 150 1325Z"
+        class="mil-move" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M300 1175H0V1174H300V1175Z" class="mil-move" />
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M150 678C232.29 678 299 611.29 299 529C299 446.71 232.29 380 150 380C67.7096 380 1 446.71 1 529C1 611.29 67.7096 678 150 678ZM150 679C232.843 679 300 611.843 300 529C300 446.157 232.843 379 150 379C67.1573 379 0 446.157 0 529C0 611.843 67.1573 679 150 679Z"
+        class="mil-move" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M299 380H1V678H299V380ZM0 379V679H300V379H0Z" class="mil-move" />
+    </svg>
   </div>
   <!-- wrapper end -->
 
@@ -938,49 +940,61 @@
       // Creating a Overlaping Sticky Card Component
       Vue.component('cardnew', {
         template: `
-    <div class="cardnew-wrap" ref="cardnew" @mousemove="handleMouseMove" @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave">
-      <div class="cardnew" :style="cardStyle">
-        <div class="cardnew-content">
-          <div class="cardnew-image">
-            <img :src="dataImage" class="cardnew-bg" :style="cardBgImage" ref="image">
-            <div class="cardnew-overlay"></div>
-          </div>
-          <div class="cardnew-text" :style="{ backgroundColor: bgColor }">
-            <div class="cardnew-title">
-              <h3>{{ title }}</h3>
+      <div class="cardnew-wrap" ref="cardnew" @mousemove="handleMouseMove" @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave">
+        <div class="cardnew" :style="cardStyle">
+          <div class="cardnew-content">
+            <div class="cardnew-image">
+              <img :src="dataImage" class="cardnew-bg" :style="cardBgImage" ref="image">
+              <div class="cardnew-overlay"></div>
             </div>
-            <div class="cardnew-info">
-              <p>{{ description }}</p>
-              <div class="cardnew-meta">
-                <p class="cardnew-date">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 2V5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16 2V5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3.5 9.09H20.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M15.6947 13.7H15.7037" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M15.6947 16.7H15.7037" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M11.9955 13.7H12.0045" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M11.9955 16.7H12.0045" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M8.29431 13.7H8.30329" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M8.29431 16.7H8.30329" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  {{ date }}
-                </p>
-                <button class="cardnew-button" :style="{ color: vibrantColor }">
-                  Read More
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.5 5L15.5 12L8.5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </button>
+            <div class="cardnew-text" :style="{ backgroundColor: bgColor }">
+              <div class="cardnew-title">
+                <h3>{{ title }}</h3>
+                <div>{{ description }}</div>
+              </div>
+              <div v-if="highlights && highlights.length">
+                <ul style="list-style-type: none; padding: 0; margin: 0;">
+                  <li v-for="(highlight, i) in highlights" :key="i" style="display: flex; align-items: center; gap: 10px; background-color: #fcecd4; border-radius: 9999px; padding: 10px 16px; margin-top: 8px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48">
+  <path fill="#e6a96b" d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"></path>
+  <path fill="#5a2e00" d="M34.586,14.586l-13.57,13.586l-5.602-5.586l-2.828,2.828l8.434,8.414l16.395-16.414L34.586,14.586z"></path>
+</svg>
+
+                    <span style="font-weight: 500; color: #00000;">{{ highlight }}</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="cardnew-info">
+                <div class="cardnew-meta">
+                  <p class="cardnew-date">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8 2V5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M16 2V5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M3.5 9.09H20.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M15.6947 13.7H15.7037" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M15.6947 16.7H15.7037" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M11.9955 13.7H12.0045" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M11.9955 16.7H12.0045" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8.29431 13.7H8.30329" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8.29431 16.7H8.30329" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    {{ date }}
+                  </p>
+                  <button class="cardnew-button" :style="{ color: vibrantColor }">
+                    Read More
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.5 5L15.5 12L8.5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
   `,
-        props: ['dataImage', 'title', 'description', 'date'],
+        props: ['dataImage', 'title', 'description', 'date', 'highlights'],
         data() {
           return {
             width: 0,
@@ -1010,7 +1024,7 @@
           },
           cardBgImage() {
             return {
-              transform: `translateX(${this.mousePX * -20}px) translateY(${this.mousePY * -20}px)`,
+              transform: `translateX(${this.mousePX * -10}px) translateY(${this.mousePY * -10}px)`,
               transition: 'transform 0.3s ease-out'
             };
           }
@@ -1138,42 +1152,72 @@
           image: "./img/works/4/Rusted.webp",
           title: "Rust-Ed",
           date: "8 July 2024",
-          description: "Rust-Ed was an exciting gathering dedicated to the Rust programming language, bringing together a vibrant community of developers, enthusiasts, where experts came to share knowledge, best practices, and innovative techniques that showcase Rust's unique strengths in creating reliable and efficient software."
+          description: "Rust-Ed was an exciting gathering dedicated to the Rust programming language, bringing together a vibrant community of developers, enthusiasts, where experts came to share knowledge, best practices, and innovative techniques that showcase Rust's unique strengths in creating reliable and efficient software.",
+          highlights: [
+            "Interactive sessions",
+            "Live coding demo",
+            "Networking opportunities"
+          ]
         },
         {
           url: "project-2.html",
           image: "./img/t_error/1.webp",
           title: "T-Error 3.O",
           date: "27-29 May 2024",
-          description: "T-Error 3.0 pitted coding skills against real-world bugs in a thrilling Mario Magic-themed showdown, where creativity met technical prowess. The two-day event attracted enthusiastic participation from first-year and second-year students across all branches, creating a vibrant atmosphere of collaboration and competition."
+          description: "T-Error 3.0 pitted coding skills against real-world bugs in a thrilling Mario Magic-themed showdown, where creativity met technical prowess. The two-day event attracted enthusiastic participation from first-year and second-year students across all branches, creating a vibrant atmosphere of collaboration and competition.",
+          highlights: [
+            "Bug fixing challenges",
+            "Team-based competitions",
+            "Prizes for top performers"
+          ]
         },
         {
           url: "project-3.html",
           image: "./img/beyond_code/1.webp",
           title: "Beyond Code",
           date: "25 May 2024",
-          description: "With his expertise, Ishan guided the students through practical solutions, helping them understand complex problems more clearly. The interactive nature of the session encouraged everyone to participate actively and share their experiences."
+          description: "With his expertise, Ishan guided the students through practical solutions, helping them understand complex problems more clearly. The interactive nature of the session encouraged everyone to participate actively and share their experiences.",
+          highlights: [
+            "Expert-led session",
+            "Practical problem-solving",
+            "Interactive Q&A"
+          ]
         },
         {
           url: "project-4.html",
           image: "./img/converted/crime.webp",
           title: "Once Upon a Crime",
           date: "12-13 Dec 2023",
-          description: "Case closed! A Murder Mystery pitted logic & code against a cunning culprit. Participants unraveled puzzles, cracked quizzes, & honed teamwork in a thrilling 2-day event. 🕵️‍♂️🔍🎭"
+          description: "Case closed! A Murder Mystery pitted logic & code against a cunning culprit. Participants unraveled puzzles, cracked quizzes, & honed teamwork in a thrilling 2-day event. 🕵️‍♂️🔍🎭",
+          highlights: [
+            "Immersive storytelling",
+            "Team-based problem solving",
+            "Prizes for top teams"
+          ]
         },
         {
           url: "project-5.html",
           image: "./img/coc/1.webp",
           title: "COC 2.O",
           date: "21 Dec 2023",
-          description: "Intense coding showdown as teams battled head-to-head, showcasing skill and innovation. A thrilling clash of minds in the ultimate coding contest! 💻🏆🚀"
+          description: "Intense coding showdown as teams battled head-to-head, showcasing skill and innovation. A thrilling clash of minds in the ultimate coding contest! 💻🏆🚀",
+          highlights: [
+            "Team-based competitions",
+            "Real-time coding challenges",
+            "Prizes for top performers"
+          ]
         },
         {
           url: "project-6.html",
           image: "./img/converted/headnode.webp",
           title: "Head Node",
           date: "09 Dec 2023",
-          description: "Dynamic exchange of knowledge and experience as seasoned seniors shared insights, answered queries, and guided juniors for a collaborative learning experience. 💡🤝"
+          description: "Dynamic exchange of knowledge and experience as seasoned seniors shared insights, answered queries, and guided juniors for a collaborative learning experience. 💡🤝",
+          highlights: [
+            "Mentorship opportunities",
+            "Knowledge sharing",
+            "Collaborative projects"
+          ]
         }
       ];
 
