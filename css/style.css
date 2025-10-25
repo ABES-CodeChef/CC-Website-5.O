@@ -2863,15 +2863,15 @@ social icons
   -webkit-transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
 }
-.mil-social-icons li a:hover {
+/* .mil-social-icons li a:hover {
   color: rgb(255, 152, 0);
-}
+} */
 .mil-social-icons.mil-dark li a {
   color: rgb(0, 0, 0);
 }
-.mil-social-icons.mil-dark li a:hover {
+/* .mil-social-icons.mil-dark li a:hover {
   color: rgb(255, 152, 0);
-}
+} */
 
 /* -------------------------------------------
 
@@ -5081,9 +5081,9 @@ footer .footer-menu ul li a {
   transition: color 0.3s ease;
 }
 
-footer .footer-menu ul li a:hover {
+/* footer .footer-menu ul li a:hover {
   color: #ff9800;
-}
+} */
 
 footer .footer-contact p {
   font-size: 14px;
@@ -5106,9 +5106,9 @@ footer .social-icons li a {
   transition: color 0.3s ease;
 }
 
-footer .social-icons li a:hover {
+/* footer .social-icons li a:hover {
   color: #ff9800;
-}
+} */
 
 footer .mil-button {
   background-color: #ff9800;
@@ -5121,9 +5121,9 @@ footer .mil-button {
   transition: background-color 0.3s ease;
 }
 
-footer .mil-button:hover {
+/* footer .mil-button:hover {
   background-color: #e68900;
-}
+} */
 
 /* Responsive Design */
 @media (max-width: 992px) {
@@ -5172,4 +5172,10 @@ footer .mil-animation {
     opacity: 1;
     bottom: 0;
   }
+}
+ .instagram i:hover{
+color: pink;
+}
+.linkedin i:hover{
+  color: #0077b5;
 }
